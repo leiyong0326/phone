@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ly.base.dao.log.LogOperaterMapper">
+  <resultMap id="BaseResultMap" type="LogOperater">
+    <id column="PK" jdbcType="INTEGER" property="pk" />
+    <result column="CREATE_BY" jdbcType="VARCHAR" property="createBy" />
+    <result column="CREATE_TIME" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="TYPE" jdbcType="CHAR" property="type" />
+    <result column="MODEL" jdbcType="VARCHAR" property="model" />
+    <result column="FUNC" jdbcType="VARCHAR" property="func" />
+    <result column="CONTENT" jdbcType="VARCHAR" property="content" />
+    <result column="METHOD" jdbcType="VARCHAR" property="method" />
+    <result column="TITLE" jdbcType="VARCHAR" property="title" />
+    <result column="FROM" jdbcType="CHAR" property="from" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    PK, CREATE_BY, CREATE_TIME, TYPE, MODEL, FUNC, CONTENT, METHOD, TITLE, `FROM`
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from log_operater
+    where PK = #{pk,jdbcType=INTEGER}
+  </select>
+  
+  <select id="selectExtend"  resultMap="BaseResultMap">
+		select
+		<if test="columns==null">
+		<include refid="Base_Column_List" />
+		</if>
+		<if test="columns!=null">
+		<foreach collection="columns" index="index" item="c" open=""
+				separator="," close="">
+				${c}
+		</foreach>
+		</if>
+		from log_operater
+		<where>
+			<foreach collection="conditions" index="index" item="c" open=""
+				separator="and" close="">
+				${c.column} ${c.operate} <if test="c.value!=null">#{c.value}</if>
+				<if test="c.value==null">
+					<foreach collection="c.values" index="index" item="v" open="("
+					separator="," close=")">
+					#{v}
+				</foreach>
+				</if>
+			</foreach>
+		</where>
+		<if test="order!=null">
+			ORDER BY ${order}
+		</if>
+	</select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from log_operater
+    where PK = #{pk,jdbcType=INTEGER}
+  </delete>
+	<delete id="deleteByBatch" parameterType="java.lang.String">
+		delete from
+		log_operater
+		where PK IN
+		<foreach collection="pks" item="item" index="index" open="("
+			separator="," close=")">
+			#{item}
+		</foreach>
+	</delete>
+  <insert id="insert" parameterType="LogOperater">
+    insert into log_operater (PK, CREATE_BY, CREATE_TIME, 
+      TYPE, MODEL, FUNC, CONTENT, 
+      METHOD, TITLE, `FROM`)
+    values (#{pk,jdbcType=INTEGER}, #{createBy,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{type,jdbcType=CHAR}, #{model,jdbcType=VARCHAR}, #{func,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR}, 
+      #{method,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, #{from,jdbcType=CHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="LogOperater">
+    insert into log_operater
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="pk != null">
+        PK,
+      </if>
+      <if test="createBy != null">
+        CREATE_BY,
+      </if>
+      <if test="createTime != null">
+        CREATE_TIME,
+      </if>
+      <if test="type != null">
+        TYPE,
+      </if>
+      <if test="model != null">
+        MODEL,
+      </if>
+      <if test="func != null">
+        FUNC,
+      </if>
+      <if test="content != null">
+        CONTENT,
+      </if>
+      <if test="method != null">
+        METHOD,
+      </if>
+      <if test="title != null">
+        TITLE,
+      </if>
+      <if test="from != null">
+        `FROM`,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="pk != null">
+        #{pk,jdbcType=INTEGER},
+      </if>
+      <if test="createBy != null">
+        #{createBy,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=CHAR},
+      </if>
+      <if test="model != null">
+        #{model,jdbcType=VARCHAR},
+      </if>
+      <if test="func != null">
+        #{func,jdbcType=VARCHAR},
+      </if>
+      <if test="content != null">
+        #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="method != null">
+        #{method,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null">
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="from != null">
+        #{from,jdbcType=CHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="LogOperater">
+    update log_operater
+    <set>
+      <if test="createBy != null">
+        CREATE_BY = #{createBy,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        CREATE_TIME = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="type != null">
+        TYPE = #{type,jdbcType=CHAR},
+      </if>
+      <if test="model != null">
+        MODEL = #{model,jdbcType=VARCHAR},
+      </if>
+      <if test="func != null">
+        FUNC = #{func,jdbcType=VARCHAR},
+      </if>
+      <if test="content != null">
+        CONTENT = #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="method != null">
+        METHOD = #{method,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null">
+        TITLE = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="from != null">
+        `FROM` = #{from,jdbcType=CHAR},
+      </if>
+    </set>
+    where PK = #{pk,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="LogOperater">
+    update log_operater
+    set CREATE_BY = #{createBy,jdbcType=VARCHAR},
+      CREATE_TIME = #{createTime,jdbcType=TIMESTAMP},
+      TYPE = #{type,jdbcType=CHAR},
+      MODEL = #{model,jdbcType=VARCHAR},
+      FUNC = #{func,jdbcType=VARCHAR},
+      CONTENT = #{content,jdbcType=VARCHAR},
+      METHOD = #{method,jdbcType=VARCHAR},
+      TITLE = #{title,jdbcType=VARCHAR},
+      `FROM` = #{from,jdbcType=CHAR}
+    where PK = #{pk,jdbcType=INTEGER}
+  </update>
+</mapper>

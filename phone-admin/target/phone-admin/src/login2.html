@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<!-- <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9,chrome=1"> -->
+<!-- <meta name="renderer" content="webkit" /> -->
+<meta charset="UTF-8">
+<!-- <meta name="viewport" -->
+<!-- 	content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"> -->
+<meta name="viewport"
+	content="initial-scale=1.0, user-scalable=no,maximum-scale=1.0" />
+<meta name='viewports' content='width=device-width,height=device-height'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>登录</title>
+<link rel="stylesheet" href="./css/reset.css">
+<link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+
+	<div class="login-wrap cy-clear">
+		<section class="login-main">
+			<h1>
+				<b style="color: red">翼翔</b><i
+					style="font-style: italic; font-size: 22px; color: #55ddcc">后台管理系统</i>
+			</h1>
+			<div class="login-form" data-cy-validator>
+				<div class="cy-form-group cy-row">
+					<div class="cy-col12">
+						<label class="login-icon-user"></label> <input class="cy-input"
+							type="text" name="loginName" placeholder="请输入用户名（6位字母或数字）"
+							value="" required="" autofocus="" data-error="请输入您的账号">
+					</div>
+				</div>
+				<div class="cy-form-group cy-row">
+					<div class="cy-col12">
+						<label class="login-icon-password"></label> <input
+							class="cy-input" type="password" name="password"
+							placeholder="请输入密码（6~20位字母或数字）" value="" required="" autofocus=""
+							data-error="请输入您的密码">
+					</div>
+				</div>
+				<div class="cy-form-group cy-row">
+					<div class="cy-col8">
+						<label class="login-icon-captcha"></label> <input class="cy-input"
+							type="text" name="captcha" placeholder="请输入验证码" value=""
+							required="" autofocus="" data-error="请输入验证码">
+					</div>
+					<div class="cy-col4 iogin-name-img">
+						<img src="/captcha/kaptcha" alt="" title="">
+					</div>
+				</div>
+				<div class="cy-form-group">
+					<div class="cy-btn cy-btn-orange cy-btn-block" data-btn="login"
+						data-type="submit">登录</div>
+				</div>
+				<div class="cy-form-group">
+					<input type="checkbox" name="rememberme" value=""> <span
+						class="iogin-memorization">记住我</span>
+				</div>
+			</div>
+		</section>
+	</div>
+	<footer class="login-footer">版权所有 - 粤公网安备11010802010035号</footer>
+
+	<script src="./js/require.js" data-main="./js/login"></script>
+</body>
+</html>

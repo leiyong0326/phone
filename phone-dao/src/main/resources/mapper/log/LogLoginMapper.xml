@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ly.base.dao.log.LogLoginMapper">
+  <resultMap id="BaseResultMap" type="LogLogin">
+    <id column="PK" jdbcType="INTEGER" property="pk" />
+    <result column="CREATE_BY" jdbcType="VARCHAR" property="createBy" />
+    <result column="CREATE_NAME" jdbcType="VARCHAR" property="createName" />
+    <result column="LOGIN_NAME" jdbcType="VARCHAR" property="loginName" />
+    <result column="PHONE" jdbcType="VARCHAR" property="phone" />
+    <result column="CREATE_TIME" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="IP" jdbcType="VARCHAR" property="ip" />
+    <result column="COUNTRY" jdbcType="VARCHAR" property="country" />
+    <result column="PROVINCE" jdbcType="VARCHAR" property="province" />
+    <result column="CITY" jdbcType="VARCHAR" property="city" />
+    <result column="AREA" jdbcType="VARCHAR" property="area" />
+    <result column="ADSL" jdbcType="VARCHAR" property="adsl" />
+    <result column="FROM" jdbcType="CHAR" property="from" />
+    <result column="BROWSER" jdbcType="VARCHAR" property="browser" />
+    <result column="OS" jdbcType="VARCHAR" property="os" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    PK, CREATE_BY,CREATE_NAME,LOGIN_NAME,PHONE, CREATE_TIME, IP, COUNTRY, PROVINCE, CITY, AREA, ADSL, `FROM`, BROWSER, 
+    OS
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from log_login
+    where PK = #{pk,jdbcType=INTEGER}
+  </select>
+  <select id="selectExtend"  resultMap="BaseResultMap">
+		select
+		<if test="columns==null">
+		<include refid="Base_Column_List" />
+		</if>
+		<if test="columns!=null">
+		<foreach collection="columns" index="index" item="c" open=""
+				separator="," close="">
+				${c}
+		</foreach>
+		</if>
+		from log_login
+		<where>
+			<foreach collection="conditions" index="index" item="c" open=""
+				separator="and" close="">
+				${c.column} ${c.operate} <if test="c.value!=null">#{c.value}</if>
+				<if test="c.value==null">
+					<foreach collection="c.values" index="index" item="v" open="("
+					separator="," close=")">
+						#{v}
+					</foreach>
+				</if>
+			</foreach>
+		</where>
+		<if test="order!=null">
+			ORDER BY ${order}
+		</if>
+	</select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from log_login
+    where PK = #{pk,jdbcType=INTEGER}
+  </delete>
+	<delete id="deleteByBatch" parameterType="java.lang.String">
+		delete from
+		log_login
+		where PK IN
+		<foreach collection="pks" item="item" index="index" open="("
+			separator="," close=")">
+			#{item}
+		</foreach>
+	</delete>
+  <insert id="insert" parameterType="LogLogin">
+    insert into log_login (PK, CREATE_BY,CREATE_NAME,LOGIN_NAME,PHONE, CREATE_TIME, 
+      IP, COUNTRY, PROVINCE, 
+      CITY, AREA, ADSL, `FROM`, 
+      BROWSER, OS)
+    values (#{pk,jdbcType=INTEGER}, #{createBy,jdbcType=VARCHAR}, #{createName,jdbcType=VARCHAR},#{loginName,jdbcType=VARCHAR},#{phone,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{ip,jdbcType=VARCHAR}, #{country,jdbcType=VARCHAR}, #{province,jdbcType=VARCHAR}, 
+      #{city,jdbcType=VARCHAR}, #{area,jdbcType=VARCHAR}, #{adsl,jdbcType=VARCHAR}, #{from,jdbcType=CHAR}, 
+      #{browser,jdbcType=VARCHAR}, #{os,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="LogLogin">
+    insert into log_login
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="pk != null">
+        PK,
+      </if>
+      <if test="createBy != null">
+        CREATE_BY,
+      </if>
+      <if test="createName != null">
+        CREATE_NAME,
+      </if>
+      <if test="loginName != null">
+        LOGIN_NAME,
+      </if>
+      <if test="phone != null">
+        PHONE,
+      </if>
+      <if test="createTime != null">
+        CREATE_TIME,
+      </if>
+      <if test="ip != null">
+        IP,
+      </if>
+      <if test="country != null">
+        COUNTRY,
+      </if>
+      <if test="province != null">
+        PROVINCE,
+      </if>
+      <if test="city != null">
+        CITY,
+      </if>
+      <if test="area != null">
+        AREA,
+      </if>
+      <if test="adsl != null">
+        ADSL,
+      </if>
+      <if test="from != null">
+        `FROM`,
+      </if>
+      <if test="browser != null">
+        BROWSER,
+      </if>
+      <if test="os != null">
+        OS,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="pk != null">
+        #{pk,jdbcType=INTEGER},
+      </if>
+      <if test="createBy != null">
+        #{createBy,jdbcType=VARCHAR},
+      </if>
+      <if test="createName != null">
+      	#{createName,jdbcType=VARCHAR},
+      </if>
+      <if test="loginName != null">
+      	#{loginName,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null">
+      	#{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ip != null">
+        #{ip,jdbcType=VARCHAR},
+      </if>
+      <if test="country != null">
+        #{country,jdbcType=VARCHAR},
+      </if>
+      <if test="province != null">
+        #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null">
+        #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="area != null">
+        #{area,jdbcType=VARCHAR},
+      </if>
+      <if test="adsl != null">
+        #{adsl,jdbcType=VARCHAR},
+      </if>
+      <if test="from != null">
+        #{from,jdbcType=CHAR},
+      </if>
+      <if test="browser != null">
+        #{browser,jdbcType=VARCHAR},
+      </if>
+      <if test="os != null">
+        #{os,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="LogLogin">
+    update log_login
+    <set>
+      <if test="createBy != null">
+        CREATE_BY = #{createBy,jdbcType=VARCHAR},
+      </if>
+      <if test="createName != null">
+        CREATE_NAME = #{createName,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        CREATE_TIME = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ip != null">
+        IP = #{ip,jdbcType=VARCHAR},
+      </if>
+      <if test="country != null">
+        COUNTRY = #{country,jdbcType=VARCHAR},
+      </if>
+      <if test="province != null">
+        PROVINCE = #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null">
+        CITY = #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="area != null">
+        AREA = #{area,jdbcType=VARCHAR},
+      </if>
+      <if test="adsl != null">
+        ADSL = #{adsl,jdbcType=VARCHAR},
+      </if>
+      <if test="from != null">
+        `FROM` = #{from,jdbcType=CHAR},
+      </if>
+      <if test="browser != null">
+        BROWSER = #{browser,jdbcType=VARCHAR},
+      </if>
+      <if test="os != null">
+        OS = #{os,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where PK = #{pk,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="LogLogin">
+    update log_login
+    set CREATE_BY = #{createBy,jdbcType=VARCHAR},
+      CREATE_NAME = #{createName,jdbcType=VARCHAR},
+      CREATE_TIME = #{createTime,jdbcType=TIMESTAMP},
+      IP = #{ip,jdbcType=VARCHAR},
+      COUNTRY = #{country,jdbcType=VARCHAR},
+      PROVINCE = #{province,jdbcType=VARCHAR},
+      CITY = #{city,jdbcType=VARCHAR},
+      AREA = #{area,jdbcType=VARCHAR},
+      ADSL = #{adsl,jdbcType=VARCHAR},
+      `FROM` = #{from,jdbcType=CHAR},
+      BROWSER = #{browser,jdbcType=VARCHAR},
+      OS = #{os,jdbcType=VARCHAR}
+    where PK = #{pk,jdbcType=INTEGER}
+  </update>
+</mapper>

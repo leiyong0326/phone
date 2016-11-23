@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<title>组织架构——翼翔管理系统</title>
+<link rel="stylesheet" href="../css/amazeui.min.css">
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/system.css">
+</head>
+<body data-column="system" data-page="role">
+
+    <!-- 内容 -->
+    <div class="cy-wrapper">
+
+    	<!-- 工具条 -->
+    	<div class="cy-toolbar">
+	        <div class="cy-location cy-l"><i class="cy-icon-fire"></i><span>用户权限管理</span></div>
+        </div>
+        <!--//End 工具条 -->
+
+        <div class="cy-grid">
+			<div class="cy-section cy-m24">
+    			<header class="cy-section-head cy-rel">
+    				<h2>权限列表</h2>
+    			</header>
+    			<div class="cy-section-main" data-temp="powermodal"></div>
+			</div>
+        </div>
+
+    </div>
+    <!--//End 内容 -->
+
+    <script type="text/template" id="powermodal">
+        <div class="cy-table">
+            <div class="cy-tr role-col">
+                <div class="cy-td">
+                    <input type="checkbox" name="" value="" ${v-show:hide} ${v-check:allchecked} ${v-on:change="checkAll"}>名称
+                </div>
+                <div class="cy-td">查看</div>
+                <div class="cy-td">编辑</div>
+                <div class="cy-td">删除</div>
+                <div class="cy-td">访问</div>
+            </div>
+            <div class="cy-tbody role-col" ${v-for:item in list}>
+                <div class="cy-tr" ${v-show:item.box}>
+                    <div class="cy-td">
+                        <input type="checkbox" name="" value="" ${v-show:item.box.row} ${v-check:item.checked} data-id="${item.pk}" ${v-on:change="checkRow"}>${item.text}
+                    </div>
+                    <div class="cy-td">
+                        <input type="checkbox" name="" value="" ${v-show:item.box.show} ${v-check:item.powers.show} data-id="${item.pk}" data-type="show" ${v-on:click="checkOne"}>
+                    </div>
+                    <div class="cy-td">
+                        <input type="checkbox" name="" value="" ${v-show:item.box.edit} ${v-check:item.powers.edit} data-id="${item.pk}" data-type="edit" ${v-on:click="checkOne"}>
+                    </div>
+                    <div class="cy-td">
+                        <input type="checkbox" name="" value="" ${v-show:item.box.del} ${v-check:item.powers.del} data-id="${item.pk}" data-type="del" ${v-on:click="checkOne"}>
+                    </div>
+                    <div class="cy-td">
+                        <input type="checkbox" name="" value="" ${v-check:item.powers.visit} data-id="${item.pk}" data-type="visit" ${v-on:click="checkOne"}>
+                    </div>
+                </div>
+            <${end}/div>
+        </div>
+        <div class="role-edit-btn cy-m24">
+            <a class="cy-btn cy-btn-green cy-btn-block" href="javascript:;" ${v-on:click="save"}>保存</a>
+        </div>
+    </script>
+
+<script src="../js/require.js" data-main="../js/system/role_info"></script>
+</body>
+</html>

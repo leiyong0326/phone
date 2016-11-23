@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<settings>
+  <setting name="cacheEnabled" value="true"/>
+  <setting name="lazyLoadingEnabled" value="true"/>
+  <setting name="multipleResultSetsEnabled" value="true"/>
+  <setting name="useColumnLabel" value="true"/>
+  <setting name="useGeneratedKeys" value="false"/>
+  <setting name="autoMappingBehavior" value="PARTIAL"/>
+  <setting name="defaultExecutorType" value="SIMPLE"/>
+  <setting name="defaultStatementTimeout" value="25"/>
+  <setting name="safeRowBoundsEnabled" value="false"/>
+  <setting name="mapUnderscoreToCamelCase" value="false"/>
+  <setting name="localCacheScope" value="SESSION"/>
+  <setting name="jdbcTypeForNull" value="OTHER"/>
+  <setting name="lazyLoadTriggerMethods" value="equals,clone,hashCode,toString"/>
+  <setting name="logImpl" value="SLF4J" />
+</settings>
+<typeAliases>
+<!-- 	<typeAlias alias="SysUser" type="com.ly.base.core.model.sys.SysUser" /> -->
+<!-- 	<typeAlias alias="SysMenu" type="com.ly.base.core.model.sys.SysMenu" /> -->
+<!-- 	<typeAlias alias="SysRole" type="com.ly.base.core.model.sys.SysRole" /> -->
+<!-- 	<typeAlias alias="SysAccount" type="com.ly.base.core.model.sys.SysAccount" /> -->
+	<!-- Log -->
+<!-- 	<typeAlias alias="LogCombo" type="com.ly.base.core.model.log.LogCombo" /> -->
+<!-- 	<typeAlias alias="LogDrawMoney" type="com.ly.base.core.model.log.LogDrawMoney" /> -->
+<!-- 	<typeAlias alias="LogLogin" type="com.ly.base.core.model.log.LogLogin" /> -->
+<!-- 	<typeAlias alias="LogOperater" type="com.ly.base.core.model.log.LogOperater" /> -->
+<!-- 	<typeAlias alias="LogPhone" type="com.ly.base.core.model.log.LogPhone" /> -->
+	<!-- Goods -->
+<!-- 	<typeAlias alias="GoodsColor" type="com.ly.base.core.model.goods.GoodsColor" /> -->
+<!-- 	<typeAlias alias="GoodsCombo" type="com.ly.base.core.model.goods.GoodsCombo" /> -->
+<!-- 	<typeAlias alias="GoodsComboLevel" type="com.ly.base.core.model.goods.GoodsComboLevel" /> -->
+<!-- 	<typeAlias alias="GoodsPhone" type="com.ly.base.core.model.goods.GoodsPhone" /> -->
+<!-- 	<typeAlias alias="GoodsType" type="com.ly.base.core.model.goods.GoodsType" /> -->
+</typeAliases>
+</configuration>

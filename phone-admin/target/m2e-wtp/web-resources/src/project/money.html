@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport"
+	content="initial-scale=1.0, user-scalable=no,maximum-scale=1.0" />
+<meta name='viewports' content='width=device-width,height=device-height' />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<title>我要提现</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/money.css" />
+</head>
+<body>
+	<div class="wrapper">
+		<form class="money-block">
+			<ul class="money-ul">
+				<li>
+					<p>可提现金额：</p>
+					<p id="ratio">0</p>
+				</li>
+				<li>
+					<p>金额(整数)：</p> <input type="number" min="1" id="money" value="0" />
+				</li>
+				<li>
+					<p>
+						说明:将提现到<b style="color: red">支付宝</b>,提现金额为:100的整数倍。
+					</p>
+				</li>
+				<li>
+					<p>提醒：如需修改支付宝账号，请联系管理员。</p>
+				</li>
+				<li class="money-button">
+					<button class="cy-confirm" type="button">申请提现</button>
+					<button class="cy-cancel" type="button">取消</button>
+				</li>
+			</ul>
+			<div class="border"></div>
+		</form>
+		<div id="history">正在努力读取记录,可能是您的成就太高了...</div>
+	</div>
+	<script type="text/javascript" src="script/jquery-1.5.1.min.js"></script>
+	<script type="text/javascript" src="script/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="script/ajax.js"></script>
+	<script type="text/javascript" src="script/money.js"></script>
+</body>
+</html>

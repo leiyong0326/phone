@@ -1,0 +1,15 @@
+com\ly\base\service\provideImpl\goods\GoodsComboLevelServiceImpl.class
+com\ly\base\service\provideImpl\goods\GoodsColorServiceImpl.class
+com\ly\base\service\provideImpl\log\LogComboServiceImpl.class
+com\ly\base\service\provideImpl\log\LogDrawMoneyServiceImpl.class
+com\ly\base\service\provideImpl\goods\GoodsTypeServiceImpl.class
+com\ly\base\service\provideImpl\sys\SysAccountServiceImpl.class
+com\ly\base\service\provideImpl\log\LogLoginServiceImpl.class
+com\ly\base\service\provideImpl\goods\GoodsPhoneServiceImpl.class
+com\ly\base\service\provideImpl\log\LogPhoneServiceImpl.class
+com\ly\base\service\provideImpl\sys\SysRoleServiceImpl.class
+com\ly\base\service\provideImpl\goods\GoodsComboServiceImpl.class
+com\ly\base\service\provideImpl\sys\SysMenuServiceImpl.class
+com\ly\base\service\provideImpl\log\LogOperaterServiceImpl.class
+com\ly\base\service\provideImpl\sys\SysUserServiceImpl.class
+com\ly\base\service\provideImpl\BaseServiceImpl.class

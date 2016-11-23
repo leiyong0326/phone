@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>手机信息编辑——翼翔管理系统</title>
+	<link rel="stylesheet" href="../css/amazeui.min.css">
+	<link rel="stylesheet" href="../css/amazeui.datetimepicker.css">
+	<link rel="stylesheet" href="../css/umeditor.min.css">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/system.css">
+</head>
+
+<body data-column="goods" data-page="phone">
+	<!-- 内容 -->
+	<div class="cy-wrapper">
+		<!-- 工具条 -->
+		<div class="cy-toolbar">
+			<div class="cy-location cy-l">
+				<a href="javascript:history.go(-1);"><i class="cy-icon-fire"></i>手机管理</a>　<i class="cy-icon-fire"></i><span>手机信息编辑</span>
+			</div>
+		</div>
+		<!--//End 工具条 -->
+		<form class="cy-form" data-modal="update">
+			<div class="cy-grid cy-m24" data-content="info-content">
+
+			</div>
+			<div class="cy-grid cy-m24">
+				<section class="cy-section">
+					<header class="cy-section-head cy-rel">
+						<h2>参数配置</h2>
+					</header>
+					<div class="cy-section-main">
+						<script type="text/plain" id="editor" style="width: 100%; height: 440px;"></script>
+					</div>
+					<div class="cy-section-foot cy-rel">
+						<button class="cy-btn cy-btn-green cy-btn-block" data-btn="save">保存</button>
+					</div>
+				</section>
+			</div>
+		</form>
+	</div>
+	<!-- 模块 -->
+	<script type="text/template" id="info-content">
+		<section class="cy-section">
+			<header class="cy-section-head cy-rel">
+				<h2>基本信息</h2>
+			</header>
+			<div class="cy-section-main">
+				<div class="cy-form-group cy-row">
+					<div class="cy-col6">
+						<div class="cy-row">
+							<label class="cy-col3">品牌：</label>
+							<div class="cy-col8">
+								<select class="prize-search-type brandPk cy-select" placeholder="品牌" name="brandPk" value="1" required></select>
+							</div>
+						</div>
+					</div>
+					<div class="cy-col6">
+						<div class="cy-row">
+							<label class="cy-col3">车系：</label>
+							<div class="cy-col8">
+								<input type="hidden" name="pk" value="${pk}" />
+								<input type="hidden" name="url" value="${url}" />
+								<select class="prize-search-type classPk cy-select" placeholder="车系" name="classPk" value="1" required></select>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cy-form-group cy-row">
+					<div class="cy-col6">
+						<div class="cy-row">
+							<label class="cy-col3">车型：</label>
+							<div class="cy-col8">
+								<input class="cy-input " type="text" name="type" placeholder="车型名称" value="${type}" required data-error="请填写车型名称">
+							</div>
+						</div>
+					</div>
+					<div class="cy-col6">
+						<div class="cy-row">
+							<label class="cy-col3">级别：</label>
+							<div class="cy-col8">
+								<select class="cy-select" placeholder="车辆级别" name="level">
+									<option value="0">微型车</option>
+									<option value="1">小型车</option>
+									<option value="2">紧凑车型</option>
+									<option value="3">中等车型</option>
+									<option value="4">高级车型</option>
+									<option value="5">豪华车型</option>
+									<option value="6">三厢车型</option>
+									<option value="7">MPV车型</option>
+									<option value="8">CDV车型</option>
+									<option value="9">SUV车型</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cy-form-group cy-row">
+					<div class="cy-col6">
+						<div class="cy-row">
+							<label class="cy-col3">原价：</label>
+							<div class="cy-col8">
+								<input class="cy-input " type="text" name="srcPrice" id="name" placeholder="原价" value="${srcPrice}" required data-error="请填写原价信息">
+							</div>
+						</div>
+					</div>
+					<div class="cy-col6">
+						<div class="cy-row">
+							<label class="cy-col3">售价：</label>
+							<div class="cy-col8">
+								<input class="cy-input " type="text" name="price" id="name" placeholder="售价" value="${price}" required data-error="请填写售价信息">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cy-form-group cy-row">
+					<div class="cy-col6">
+						<div class="cy-row">
+							<label class="cy-col3">数量：</label>
+							<div class="cy-col8">
+								<input class="cy-input " type="number" name="stuck" placeholder="数量" value="${stuck}" required min="0" data-error="请填写数量信息">
+							</div>
+						</div>
+					</div>
+					<div class="cy-col6">
+						<div class="cy-row">
+							<label class="cy-col3">库存状态：</label>
+							<div class="cy-col8">
+								<select class="cy-select" placeholder="库存状态" name="status">
+									<option value="2">现车充足</option>
+									<option value="1">库存告急</option>
+									<option value="0">需预定</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cy-form-group cy-row">
+					<div class="cy-col6">
+						<div class="cy-row">
+							<label class="cy-col3">油耗：</label>
+							<div class="cy-col8">
+								<input class="cy-input " type="number" min="0" max="100" name="consume" placeholder="油耗" value="${consume}" pattern="^\d+($)|(\.\d+$)" required data-error="请填写油耗信息">
+							</div>
+						</div>
+					</div>
+					<div class="cy-col6">
+						<div class="cy-row"></div>
+					</div>
+				</div>
+				<div class="cy-form-group cy-row">
+					<div class="cy-col6">
+						<div class="cy-row">
+							<label class="cy-col3">预订订金：</label>
+							<div class="cy-col8">
+								<input class="cy-input " type="number" min="0" name="money" placeholder="支付订金" value="${money}">
+							</div>
+						</div>
+					</div>
+					<div class="cy-col6">
+						<div class="cy-row">
+							<label class="cy-col3">强制支付：</label>
+							<div class="cy-col8">
+								<select class="cy-select" placeholder="是否强制支付" name="forcePay">
+									<option value="1">是</option>
+									<option value="0">否</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cy-form-group cy-row">
+					<div class="cy-col6">
+						<div class="cy-row">
+							<label class="cy-col3">是否特卖：</label>
+							<div class="cy-col8">
+								<select class="cy-select" placeholder="是否特卖" name="sale">
+									<option value="1">是</option>
+									<option value="0">否</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="cy-col6">
+						<div class="cy-row">
+							<label class="cy-col3">特卖时间：</label>
+							<div class="cy-col4">
+								<input class="cy-input  start-date" type="text" data-type="date" name="startTime" placeholder="特卖开始日期" value="${startTime}">
+							</div>
+							<div class="cy-col4">
+								<input class="cy-input  end-date" type="text" data-type="date" name="endTime" placeholder="特卖结束日期" value="${endTime}">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cy-form-group cy-row">
+					<div class="cy-col6">
+						<div class="cy-row">
+							<label class="cy-col3">是否热销：</label>
+							<div class="cy-col8">
+								<select class="cy-select" placeholder="是否热销" name="hot">
+									<option value="1">是</option>
+									<option value="0">否</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="cy-col6">
+						<div class="cy-row">
+							<label class="cy-col3">手机排序：</label>
+							<div class="cy-col8">
+								<input class="cy-input " type="number" name="seq" placeholder="排序值越小在前" value="${seq}" required min="1" max="999" data-error="请填写排序数值">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cy-form-group cy-row">
+					<div class="cy-col6">
+						<div class="cy-row">
+							<label class="cy-col3">列表页图片<span>(258px * 168px)</span></label>
+							<div class="cy-col8">
+								<input class="cy-input" type="hidden" name="img" value="${img}">
+								<input class="cy-input-file" type="file" value="${img}">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="cy-section">
+			<header class="cy-section-head cy-rel">
+				<h2>标签管理</h2>
+			</header>
+			<div class="cy-section-main">
+				<div class="cy-form-group cy-row">
+					<label class="cy-col2">活动标签1：</label>
+					<div class="cy-col2">
+						<select name="tag1" class="cy-select shopCarTag"></select>
+					</div>
+					<div class="cy-col7">
+						<input class="cy-input" type="text" name="msg1" value="${msg1}" />
+					</div>
+				</div>
+				<div class="cy-form-group cy-row">
+					<label class="cy-col2">活动标签2：</label>
+					<div class="cy-col2">
+						<select name="tag2" class="cy-select shopCarTag"></select>
+					</div>
+					<div class="cy-col7">
+						<input class="cy-input" type="text" name="msg2" value="${msg2}" />
+					</div>
+				</div>
+				<div class="cy-form-group cy-row">
+					<label class="cy-col2">活动标签3：</label>
+					<div class="cy-col2">
+						<select name="tag3" class="cy-select shopCarTag"></select>
+					</div>
+					<div class="cy-col7">
+						<input class="cy-input" type="text" name="msg3" value="${msg3}" />
+					</div>
+				</div>
+				<div class="cy-form-group cy-row">
+					<label class="cy-col2">活动标签4：</label>
+					<div class="cy-col2">
+						<select name="tag4" class="cy-select shopCarTag"></select>
+					</div>
+					<div class="cy-col7">
+						<input class="cy-input" type="text" name="msg4" value="${msg4}" />
+					</div>
+				</div>
+			</div>
+		</section>
+	</script>
+	<!--//End 内容 -->
+	<script src="../js/require.js" data-main="../js/shop/car_edit_info"></script>
+</body>
+
+</html>

@@ -1,0 +1,350 @@
+2016-09-24 13:14:38 com.ly.common.util.ArrayUtilTest.testBefore(ArrayUtilTest.java:29) ArrayUtilTest.java DEBUG testBefore() - start
+2016-09-24 13:14:38 com.ly.common.util.ArrayUtilTest.testBefore(ArrayUtilTest.java:38) ArrayUtilTest.java DEBUG testBefore() - end
+2016-09-24 13:14:38 com.ly.common.util.ArrayUtilTest.testSortList(ArrayUtilTest.java:44) ArrayUtilTest.java DEBUG testSortList() - start
+2016-09-24 13:14:38 com.ly.common.util.ArrayUtilTest.testSortList(ArrayUtilTest.java:51) ArrayUtilTest.java DEBUG testSortList() - end
+2016-09-24 13:14:38 com.ly.common.util.ArrayUtilTest.testBefore(ArrayUtilTest.java:29) ArrayUtilTest.java DEBUG testBefore() - start
+2016-09-24 13:14:38 com.ly.common.util.ArrayUtilTest.testBefore(ArrayUtilTest.java:38) ArrayUtilTest.java DEBUG testBefore() - end
+2016-09-24 13:14:38 com.ly.common.util.ArrayUtilTest.testFileter(ArrayUtilTest.java:58) ArrayUtilTest.java DEBUG testFileter() - start
+2016-09-24 13:14:38 com.ly.common.util.ArrayUtilTest.testFileter(ArrayUtilTest.java:65) ArrayUtilTest.java DEBUG testFileter() - end
+2016-09-24 13:14:38 com.ly.common.util.ArrayUtilTest.testBefore(ArrayUtilTest.java:29) ArrayUtilTest.java DEBUG testBefore() - start
+2016-09-24 13:14:38 com.ly.common.util.ArrayUtilTest.testBefore(ArrayUtilTest.java:38) ArrayUtilTest.java DEBUG testBefore() - end
+2016-09-24 13:14:38 com.ly.common.util.ArrayUtilTest.testForeachBean(ArrayUtilTest.java:117) ArrayUtilTest.java DEBUG testFileter() - start
+2016-09-24 13:14:38 com.ly.common.util.ArrayUtilTest.testForeachBean(ArrayUtilTest.java:126) ArrayUtilTest.java DEBUG testFileter() - end
+2016-09-24 13:14:38 com.ly.common.util.ArrayUtilTest.testBefore(ArrayUtilTest.java:29) ArrayUtilTest.java DEBUG testBefore() - start
+2016-09-24 13:14:38 com.ly.common.util.ArrayUtilTest.testBefore(ArrayUtilTest.java:38) ArrayUtilTest.java DEBUG testBefore() - end
+2016-09-24 13:14:38 com.ly.common.util.ArrayUtilTest.testForeachList(ArrayUtilTest.java:71) ArrayUtilTest.java DEBUG testFileter() - start
+2016-09-24 13:14:38 com.ly.common.util.ArrayUtilTest.testForeachList(ArrayUtilTest.java:79) ArrayUtilTest.java DEBUG testFileter() - end
+2016-09-24 13:14:38 com.ly.common.util.ArrayUtilTest.testBefore(ArrayUtilTest.java:29) ArrayUtilTest.java DEBUG testBefore() - start
+2016-09-24 13:14:38 com.ly.common.util.ArrayUtilTest.testBefore(ArrayUtilTest.java:38) ArrayUtilTest.java DEBUG testBefore() - end
+2016-09-24 13:14:38 com.ly.common.util.ArrayUtilTest.testForeachMap(ArrayUtilTest.java:85) ArrayUtilTest.java DEBUG testFileter() - start
+2016-09-24 13:14:38 com.ly.common.util.ArrayUtilTest.testForeachMap(ArrayUtilTest.java:95) ArrayUtilTest.java DEBUG testFileter() - end
+2016-09-24 13:14:38 com.ly.common.util.ArrayUtilTest.testBefore(ArrayUtilTest.java:29) ArrayUtilTest.java DEBUG testBefore() - start
+2016-09-24 13:14:38 com.ly.common.util.ArrayUtilTest.testBefore(ArrayUtilTest.java:38) ArrayUtilTest.java DEBUG testBefore() - end
+2016-09-24 13:14:38 com.ly.common.util.ArrayUtilTest.testForeachSet(ArrayUtilTest.java:101) ArrayUtilTest.java DEBUG testFileter() - start
+2016-09-24 13:14:38 com.ly.common.util.ArrayUtilTest.testForeachSet(ArrayUtilTest.java:111) ArrayUtilTest.java DEBUG testFileter() - end
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: false
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Boolean' value 'false' to type 'Boolean'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a Boolean
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: 0
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Integer' value '0' to type 'Byte'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:158) AbstractConverter.java DEBUG     Converted to Byte value '0'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value:  
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Character' value ' ' to type 'Character'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a Character
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: 0
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Integer' value '0' to type 'Double'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:158) AbstractConverter.java DEBUG     Converted to Double value '0.0'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: 0
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Integer' value '0' to type 'Float'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:158) AbstractConverter.java DEBUG     Converted to Float value '0.0'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: 0
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Integer' value '0' to type 'Integer'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a Integer
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: 0
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Integer' value '0' to type 'Long'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:158) AbstractConverter.java DEBUG     Converted to Long value '0'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: 0
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Integer' value '0' to type 'Short'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:158) AbstractConverter.java DEBUG     Converted to Short value '0'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: 0.0
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'BigDecimal' value '0.0' to type 'BigDecimal'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a BigDecimal
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: 0
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'BigInteger' value '0' to type 'BigInteger'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a BigInteger
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: false
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Boolean' value 'false' to type 'Boolean'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a Boolean
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: 0
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Integer' value '0' to type 'Byte'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:158) AbstractConverter.java DEBUG     Converted to Byte value '0'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value:  
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Character' value ' ' to type 'Character'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a Character
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: 0
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Integer' value '0' to type 'Double'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:158) AbstractConverter.java DEBUG     Converted to Double value '0.0'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: 0
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Integer' value '0' to type 'Float'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:158) AbstractConverter.java DEBUG     Converted to Float value '0.0'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: 0
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Integer' value '0' to type 'Integer'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a Integer
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: 0
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Integer' value '0' to type 'Long'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:158) AbstractConverter.java DEBUG     Converted to Long value '0'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: 0
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Integer' value '0' to type 'Short'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:158) AbstractConverter.java DEBUG     Converted to Short value '0'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: 
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'String' value '' to type 'String'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [Z@4f970963
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'boolean[]' value '[Z@4f970963' to type 'boolean[]'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a boolean[]
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [B@7b49cea0
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'byte[]' value '[B@7b49cea0' to type 'byte[]'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a byte[]
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [C@7fac631b
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'char[]' value '[C@7fac631b' to type 'char[]'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a char[]
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [D@5b87ed94
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'double[]' value '[D@5b87ed94' to type 'double[]'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a double[]
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [F@5bc79255
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'float[]' value '[F@5bc79255' to type 'float[]'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a float[]
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [I@23e028a9
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'int[]' value '[I@23e028a9' to type 'int[]'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a int[]
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [J@3dd4520b
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'long[]' value '[J@3dd4520b' to type 'long[]'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a long[]
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [S@610694f1
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'short[]' value '[S@610694f1' to type 'short[]'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a short[]
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [Ljava.math.BigDecimal;@5c5a1b69
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'BigDecimal[]' value '[Ljava.math.BigDecimal;@5c5a1b69' to type 'BigDecimal[]'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a BigDecimal[]
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [Ljava.math.BigInteger;@627551fb
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'BigInteger[]' value '[Ljava.math.BigInteger;@627551fb' to type 'BigInteger[]'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a BigInteger[]
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [Ljava.lang.Boolean;@2758fe70
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Boolean[]' value '[Ljava.lang.Boolean;@2758fe70' to type 'Boolean[]'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a Boolean[]
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [Ljava.lang.Byte;@578486a3
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Byte[]' value '[Ljava.lang.Byte;@578486a3' to type 'Byte[]'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a Byte[]
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [Ljava.lang.Character;@35d176f7
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Character[]' value '[Ljava.lang.Character;@35d176f7' to type 'Character[]'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a Character[]
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [Ljava.lang.Double;@6ebc05a6
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Double[]' value '[Ljava.lang.Double;@6ebc05a6' to type 'Double[]'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a Double[]
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [Ljava.lang.Float;@50b494a6
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Float[]' value '[Ljava.lang.Float;@50b494a6' to type 'Float[]'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a Float[]
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [Ljava.lang.Integer;@32709393
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Integer[]' value '[Ljava.lang.Integer;@32709393' to type 'Integer[]'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a Integer[]
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [Ljava.lang.Long;@49fc609f
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Long[]' value '[Ljava.lang.Long;@49fc609f' to type 'Long[]'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a Long[]
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [Ljava.lang.Short;@3a883ce7
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Short[]' value '[Ljava.lang.Short;@3a883ce7' to type 'Short[]'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a Short[]
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [Ljava.lang.String;@6321e813
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'String[]' value '[Ljava.lang.String;@6321e813' to type 'String[]'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a String[]
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [Ljava.lang.Class;@22a67b4
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Class[]' value '[Ljava.lang.Class;@22a67b4' to type 'Class[]'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a Class[]
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [Ljava.util.Date;@57855c9a
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Date[]' value '[Ljava.util.Date;@57855c9a' to type 'Date[]'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a Date[]
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [Ljava.util.Calendar;@3224f60b
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Calendar[]' value '[Ljava.util.Calendar;@3224f60b' to type 'Calendar[]'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a Calendar[]
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [Ljava.io.File;@1efed156
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'java.io.File[]' value '[Ljava.io.File;@1efed156' to type 'java.io.File[]'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a java.io.File[]
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [Ljava.sql.Date;@72b6cbcc
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'java.sql.Date[]' value '[Ljava.sql.Date;@72b6cbcc' to type 'java.sql.Date[]'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a java.sql.Date[]
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [Ljava.sql.Time;@68bbe345
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'java.sql.Time[]' value '[Ljava.sql.Time;@68bbe345' to type 'java.sql.Time[]'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a java.sql.Time[]
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [Ljava.sql.Timestamp;@7494e528
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'java.sql.Timestamp[]' value '[Ljava.sql.Timestamp;@7494e528' to type 'java.sql.Timestamp[]'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a java.sql.Timestamp[]
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [Ljava.net.URL;@7c29daf3
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'java.net.URL[]' value '[Ljava.net.URL;@7c29daf3' to type 'java.net.URL[]'
+2016-09-24 13:14:38 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a java.net.URL[]
+2016-09-24 13:14:39 com.ly.base.common.util.JsonUtil.toJsonString(JsonUtil.java:47) JsonUtil.java DEBUG toJsonString(Object) - start
+2016-09-24 13:14:39 com.ly.base.common.util.JsonUtil.toJsonString(JsonUtil.java:51) JsonUtil.java DEBUG #JSON:[]
+2016-09-24 13:14:39 com.ly.base.common.util.JsonUtil.toJsonString(JsonUtil.java:52) JsonUtil.java DEBUG toJsonString(Object) - end
+2016-09-24 13:14:39 com.ly.base.common.util.JsonUtil.toJsonString(JsonUtil.java:47) JsonUtil.java DEBUG toJsonString(Object) - start
+2016-09-24 13:14:39 com.ly.base.common.util.JsonUtil.toJsonString(JsonUtil.java:51) JsonUtil.java DEBUG #JSON:[{"column":"abc","operate":"in","value":["123","345","123"]},{"column":"abc","operate":"in","value":["123","345","123"]}]
+2016-09-24 13:14:39 com.ly.base.common.util.JsonUtil.toJsonString(JsonUtil.java:52) JsonUtil.java DEBUG toJsonString(Object) - end
+2016-09-24 13:14:39 com.ly.base.common.util.JsonUtil.toJsonString(JsonUtil.java:47) JsonUtil.java DEBUG toJsonString(Object) - start
+2016-09-24 13:14:39 com.ly.base.common.util.JsonUtil.toJsonString(JsonUtil.java:51) JsonUtil.java DEBUG #JSON:[{"column":"abc","operate":"in","value":["123","345","123"]},{"column":"abc","operate":"in","value":["123","345","123"]}]
+2016-09-24 13:14:39 com.ly.base.common.util.JsonUtil.toJsonString(JsonUtil.java:52) JsonUtil.java DEBUG toJsonString(Object) - end
+2016-09-24 13:14:39 com.ly.base.common.util.JsonUtil.toJsonString(JsonUtil.java:47) JsonUtil.java DEBUG toJsonString(Object) - start
+2016-09-24 13:14:39 com.ly.base.common.util.JsonUtil.toJsonString(JsonUtil.java:51) JsonUtil.java DEBUG #JSON:[{"column":"abc","operate":"in","value":["123","345","123"]},{"column":"abc","operate":"in","value":["123","345","123"]}]
+2016-09-24 13:14:39 com.ly.base.common.util.JsonUtil.toJsonString(JsonUtil.java:52) JsonUtil.java DEBUG toJsonString(Object) - end
+2016-09-24 13:14:39 com.ly.base.common.util.PropertiesCacheUtil.loadProperties(PropertiesCacheUtil.java:46) PropertiesCacheUtil.java DEBUG loadProperties(String) - start
+2016-09-24 13:14:39 com.ly.base.common.util.PropertiesCacheUtil.loadProperties(PropertiesCacheUtil.java:77) PropertiesCacheUtil.java DEBUG loadProperties(String) - end
+2016-09-24 13:17:16 com.ly.common.util.ArrayUtilTest.testBefore(ArrayUtilTest.java:29) ArrayUtilTest.java DEBUG testBefore() - start
+2016-09-24 13:17:16 com.ly.common.util.ArrayUtilTest.testBefore(ArrayUtilTest.java:38) ArrayUtilTest.java DEBUG testBefore() - end
+2016-09-24 13:17:16 com.ly.common.util.ArrayUtilTest.testSortList(ArrayUtilTest.java:44) ArrayUtilTest.java DEBUG testSortList() - start
+2016-09-24 13:17:16 com.ly.common.util.ArrayUtilTest.testSortList(ArrayUtilTest.java:51) ArrayUtilTest.java DEBUG testSortList() - end
+2016-09-24 13:17:16 com.ly.common.util.ArrayUtilTest.testBefore(ArrayUtilTest.java:29) ArrayUtilTest.java DEBUG testBefore() - start
+2016-09-24 13:17:16 com.ly.common.util.ArrayUtilTest.testBefore(ArrayUtilTest.java:38) ArrayUtilTest.java DEBUG testBefore() - end
+2016-09-24 13:17:16 com.ly.common.util.ArrayUtilTest.testFileter(ArrayUtilTest.java:58) ArrayUtilTest.java DEBUG testFileter() - start
+2016-09-24 13:17:16 com.ly.common.util.ArrayUtilTest.testFileter(ArrayUtilTest.java:65) ArrayUtilTest.java DEBUG testFileter() - end
+2016-09-24 13:17:16 com.ly.common.util.ArrayUtilTest.testBefore(ArrayUtilTest.java:29) ArrayUtilTest.java DEBUG testBefore() - start
+2016-09-24 13:17:16 com.ly.common.util.ArrayUtilTest.testBefore(ArrayUtilTest.java:38) ArrayUtilTest.java DEBUG testBefore() - end
+2016-09-24 13:17:16 com.ly.common.util.ArrayUtilTest.testForeachBean(ArrayUtilTest.java:117) ArrayUtilTest.java DEBUG testFileter() - start
+2016-09-24 13:17:16 com.ly.common.util.ArrayUtilTest.testForeachBean(ArrayUtilTest.java:126) ArrayUtilTest.java DEBUG testFileter() - end
+2016-09-24 13:17:16 com.ly.common.util.ArrayUtilTest.testBefore(ArrayUtilTest.java:29) ArrayUtilTest.java DEBUG testBefore() - start
+2016-09-24 13:17:16 com.ly.common.util.ArrayUtilTest.testBefore(ArrayUtilTest.java:38) ArrayUtilTest.java DEBUG testBefore() - end
+2016-09-24 13:17:16 com.ly.common.util.ArrayUtilTest.testForeachList(ArrayUtilTest.java:71) ArrayUtilTest.java DEBUG testFileter() - start
+2016-09-24 13:17:16 com.ly.common.util.ArrayUtilTest.testForeachList(ArrayUtilTest.java:79) ArrayUtilTest.java DEBUG testFileter() - end
+2016-09-24 13:17:16 com.ly.common.util.ArrayUtilTest.testBefore(ArrayUtilTest.java:29) ArrayUtilTest.java DEBUG testBefore() - start
+2016-09-24 13:17:16 com.ly.common.util.ArrayUtilTest.testBefore(ArrayUtilTest.java:38) ArrayUtilTest.java DEBUG testBefore() - end
+2016-09-24 13:17:16 com.ly.common.util.ArrayUtilTest.testForeachMap(ArrayUtilTest.java:85) ArrayUtilTest.java DEBUG testFileter() - start
+2016-09-24 13:17:16 com.ly.common.util.ArrayUtilTest.testForeachMap(ArrayUtilTest.java:95) ArrayUtilTest.java DEBUG testFileter() - end
+2016-09-24 13:17:16 com.ly.common.util.ArrayUtilTest.testBefore(ArrayUtilTest.java:29) ArrayUtilTest.java DEBUG testBefore() - start
+2016-09-24 13:17:16 com.ly.common.util.ArrayUtilTest.testBefore(ArrayUtilTest.java:38) ArrayUtilTest.java DEBUG testBefore() - end
+2016-09-24 13:17:16 com.ly.common.util.ArrayUtilTest.testForeachSet(ArrayUtilTest.java:101) ArrayUtilTest.java DEBUG testFileter() - start
+2016-09-24 13:17:16 com.ly.common.util.ArrayUtilTest.testForeachSet(ArrayUtilTest.java:111) ArrayUtilTest.java DEBUG testFileter() - end
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: false
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Boolean' value 'false' to type 'Boolean'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a Boolean
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: 0
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Integer' value '0' to type 'Byte'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:158) AbstractConverter.java DEBUG     Converted to Byte value '0'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value:  
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Character' value ' ' to type 'Character'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a Character
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: 0
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Integer' value '0' to type 'Double'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:158) AbstractConverter.java DEBUG     Converted to Double value '0.0'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: 0
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Integer' value '0' to type 'Float'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:158) AbstractConverter.java DEBUG     Converted to Float value '0.0'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: 0
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Integer' value '0' to type 'Integer'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a Integer
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: 0
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Integer' value '0' to type 'Long'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:158) AbstractConverter.java DEBUG     Converted to Long value '0'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: 0
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Integer' value '0' to type 'Short'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:158) AbstractConverter.java DEBUG     Converted to Short value '0'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: 0.0
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'BigDecimal' value '0.0' to type 'BigDecimal'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a BigDecimal
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: 0
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'BigInteger' value '0' to type 'BigInteger'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a BigInteger
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: false
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Boolean' value 'false' to type 'Boolean'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a Boolean
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: 0
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Integer' value '0' to type 'Byte'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:158) AbstractConverter.java DEBUG     Converted to Byte value '0'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value:  
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Character' value ' ' to type 'Character'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a Character
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: 0
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Integer' value '0' to type 'Double'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:158) AbstractConverter.java DEBUG     Converted to Double value '0.0'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: 0
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Integer' value '0' to type 'Float'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:158) AbstractConverter.java DEBUG     Converted to Float value '0.0'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: 0
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Integer' value '0' to type 'Integer'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a Integer
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: 0
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Integer' value '0' to type 'Long'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:158) AbstractConverter.java DEBUG     Converted to Long value '0'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: 0
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Integer' value '0' to type 'Short'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:158) AbstractConverter.java DEBUG     Converted to Short value '0'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: 
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'String' value '' to type 'String'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [Z@4f970963
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'boolean[]' value '[Z@4f970963' to type 'boolean[]'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a boolean[]
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [B@7b49cea0
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'byte[]' value '[B@7b49cea0' to type 'byte[]'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a byte[]
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [C@7fac631b
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'char[]' value '[C@7fac631b' to type 'char[]'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a char[]
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [D@5b87ed94
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'double[]' value '[D@5b87ed94' to type 'double[]'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a double[]
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [F@5bc79255
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'float[]' value '[F@5bc79255' to type 'float[]'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a float[]
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [I@23e028a9
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'int[]' value '[I@23e028a9' to type 'int[]'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a int[]
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [J@3dd4520b
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'long[]' value '[J@3dd4520b' to type 'long[]'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a long[]
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [S@610694f1
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'short[]' value '[S@610694f1' to type 'short[]'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a short[]
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [Ljava.math.BigDecimal;@5c5a1b69
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'BigDecimal[]' value '[Ljava.math.BigDecimal;@5c5a1b69' to type 'BigDecimal[]'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a BigDecimal[]
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [Ljava.math.BigInteger;@627551fb
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'BigInteger[]' value '[Ljava.math.BigInteger;@627551fb' to type 'BigInteger[]'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a BigInteger[]
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [Ljava.lang.Boolean;@2758fe70
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Boolean[]' value '[Ljava.lang.Boolean;@2758fe70' to type 'Boolean[]'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a Boolean[]
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [Ljava.lang.Byte;@578486a3
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Byte[]' value '[Ljava.lang.Byte;@578486a3' to type 'Byte[]'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a Byte[]
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [Ljava.lang.Character;@35d176f7
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Character[]' value '[Ljava.lang.Character;@35d176f7' to type 'Character[]'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a Character[]
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [Ljava.lang.Double;@6ebc05a6
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Double[]' value '[Ljava.lang.Double;@6ebc05a6' to type 'Double[]'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a Double[]
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [Ljava.lang.Float;@50b494a6
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Float[]' value '[Ljava.lang.Float;@50b494a6' to type 'Float[]'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a Float[]
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [Ljava.lang.Integer;@32709393
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Integer[]' value '[Ljava.lang.Integer;@32709393' to type 'Integer[]'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a Integer[]
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [Ljava.lang.Long;@49fc609f
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Long[]' value '[Ljava.lang.Long;@49fc609f' to type 'Long[]'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a Long[]
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [Ljava.lang.Short;@3a883ce7
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Short[]' value '[Ljava.lang.Short;@3a883ce7' to type 'Short[]'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a Short[]
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [Ljava.lang.String;@6321e813
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'String[]' value '[Ljava.lang.String;@6321e813' to type 'String[]'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a String[]
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [Ljava.lang.Class;@22a67b4
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Class[]' value '[Ljava.lang.Class;@22a67b4' to type 'Class[]'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a Class[]
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [Ljava.util.Date;@57855c9a
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Date[]' value '[Ljava.util.Date;@57855c9a' to type 'Date[]'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a Date[]
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [Ljava.util.Calendar;@3224f60b
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'Calendar[]' value '[Ljava.util.Calendar;@3224f60b' to type 'Calendar[]'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a Calendar[]
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [Ljava.io.File;@1efed156
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'java.io.File[]' value '[Ljava.io.File;@1efed156' to type 'java.io.File[]'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a java.io.File[]
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [Ljava.sql.Date;@72b6cbcc
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'java.sql.Date[]' value '[Ljava.sql.Date;@72b6cbcc' to type 'java.sql.Date[]'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a java.sql.Date[]
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [Ljava.sql.Time;@68bbe345
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'java.sql.Time[]' value '[Ljava.sql.Time;@68bbe345' to type 'java.sql.Time[]'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a java.sql.Time[]
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [Ljava.sql.Timestamp;@7494e528
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'java.sql.Timestamp[]' value '[Ljava.sql.Timestamp;@7494e528' to type 'java.sql.Timestamp[]'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a java.sql.Timestamp[]
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.setDefaultValue(AbstractConverter.java:336) AbstractConverter.java DEBUG Setting default value: [Ljava.net.URL;@7c29daf3
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:127) AbstractConverter.java DEBUG Converting 'java.net.URL[]' value '[Ljava.net.URL;@7c29daf3' to type 'java.net.URL[]'
+2016-09-24 13:17:16 org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:149) AbstractConverter.java DEBUG     No conversion required, value is already a java.net.URL[]
+2016-09-24 13:17:17 com.ly.base.common.util.JsonUtil.toJsonString(JsonUtil.java:47) JsonUtil.java DEBUG toJsonString(Object) - start
+2016-09-24 13:17:17 com.ly.base.common.util.JsonUtil.toJsonString(JsonUtil.java:51) JsonUtil.java DEBUG #JSON:[]
+2016-09-24 13:17:17 com.ly.base.common.util.JsonUtil.toJsonString(JsonUtil.java:52) JsonUtil.java DEBUG toJsonString(Object) - end
+2016-09-24 13:17:17 com.ly.base.common.util.JsonUtil.toJsonString(JsonUtil.java:47) JsonUtil.java DEBUG toJsonString(Object) - start
+2016-09-24 13:17:17 com.ly.base.common.util.JsonUtil.toJsonString(JsonUtil.java:51) JsonUtil.java DEBUG #JSON:[{"column":"abc","operate":"in","value":["123","345","123"]},{"column":"abc","operate":"in","value":["123","345","123"]}]
+2016-09-24 13:17:17 com.ly.base.common.util.JsonUtil.toJsonString(JsonUtil.java:52) JsonUtil.java DEBUG toJsonString(Object) - end
+2016-09-24 13:17:17 com.ly.base.common.util.JsonUtil.toJsonString(JsonUtil.java:47) JsonUtil.java DEBUG toJsonString(Object) - start
+2016-09-24 13:17:17 com.ly.base.common.util.JsonUtil.toJsonString(JsonUtil.java:51) JsonUtil.java DEBUG #JSON:[{"column":"abc","operate":"in","value":["123","345","123"]},{"column":"abc","operate":"in","value":["123","345","123"]}]
+2016-09-24 13:17:17 com.ly.base.common.util.JsonUtil.toJsonString(JsonUtil.java:52) JsonUtil.java DEBUG toJsonString(Object) - end
+2016-09-24 13:17:17 com.ly.base.common.util.JsonUtil.toJsonString(JsonUtil.java:47) JsonUtil.java DEBUG toJsonString(Object) - start
+2016-09-24 13:17:17 com.ly.base.common.util.JsonUtil.toJsonString(JsonUtil.java:51) JsonUtil.java DEBUG #JSON:[{"column":"abc","operate":"in","value":["123","345","123"]},{"column":"abc","operate":"in","value":["123","345","123"]}]
+2016-09-24 13:17:17 com.ly.base.common.util.JsonUtil.toJsonString(JsonUtil.java:52) JsonUtil.java DEBUG toJsonString(Object) - end
+2016-09-24 13:17:18 com.ly.base.common.util.PropertiesCacheUtil.loadProperties(PropertiesCacheUtil.java:46) PropertiesCacheUtil.java DEBUG loadProperties(String) - start
+2016-09-24 13:17:18 com.ly.base.common.util.PropertiesCacheUtil.loadProperties(PropertiesCacheUtil.java:77) PropertiesCacheUtil.java DEBUG loadProperties(String) - end

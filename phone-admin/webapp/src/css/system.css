@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+/*
+ * author: luoxu-xu.github.io;
+ * date: 2016.06.28;
+ */
+
+
+/* 组织架构 */
+.cy-addgroup { right: 0; bottom: 0; left: 220px; top: 0; overflow-y: auto; }
+.addgroup-extend { display: inline-block; }
+.addgroup-store { font-size: 14px; }
+
+
+/* 员工管理 */
+.yggl-photo { display: none; width: 40px; height: 40px; overflow: hidden; }
+
+
+/* 会员卡积分规则 */
+.vip-mark-dh span { display: inline-block; float: left; height: 40px; line-height: 40px; }
+.vip-mark-dh span:first-child { margin-right: 12px; }
+.vip-mark-dh input { float: left; margin: 0 12px; width: auto; }
+
+
+/* role_info */
+.role-col .cy-td:first-child {
+    width: 200px;
+    text-align: left;
+    text-indent: 24px;
+}
+.role-col .cy-td:first-child input {
+    margin-right: 12px;
+}
+
+
+/* 奖品卡券 */
+div[data-temp="add-content"] {
+    height: 308px;
+    overflow-y: auto;
+}
+.gift-list .cy-input {
+    text-align: center;
+}

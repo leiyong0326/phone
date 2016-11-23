@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<title>推荐有礼——翼翔管理系统</title>
+<link rel="stylesheet" href="../css/amazeui.min.css">
+<link rel="stylesheet" href="../css/amazeui.datetimepicker.css">
+<link rel="stylesheet" href="../css/umeditor.min.css">
+<link rel="stylesheet" href="../css/reset.css">
+</head>
+<body data-column="activity" data-page="recommend">
+
+    <!-- 内容 -->
+    <div class="cy-wrapper">
+
+    	<!-- 工具条 -->
+    	<div class="cy-toolbar cy-rel">
+	        <div class="cy-location cy-l"><i class="cy-icon-fire"></i><span>推荐项设置</span></div>
+        </div>
+        <!--//End 工具条 -->
+
+        <div class="cy-grid cy-m24">
+
+    		<section class="cy-section">
+    			<header class="cy-section-head cy-rel">
+    				<h2>推荐项设置</h2>
+    				<div class="cy-section-operate cy-abs cy-middle">
+    					<button class="cy-btn cy-btn-green cy-btn-sm" data-config="add">新增</button>
+    				</div>
+    			</header>
+    			<div class="cy-section-main">
+	    			<div class="cy-table">
+	    				
+						<div class="cy-tr">
+							<div class="cy-th">类型</div>
+							<div class="cy-th">推荐对象</div>
+							<div class="cy-th">活动开始日期</div>
+							<div class="cy-th">活动结束日期</div>
+							<div class="cy-th">推荐人奖项</div>
+							<div class="cy-th">被推荐人奖项</div>
+							<div class="cy-th">操作</div>
+						</div>
+						<div class="cy-tbody" data-content="config-info-list"></div>
+
+	    			</div>
+	    			<header class="cy-section-head cy-rel">
+    					<h2>推荐有奖活动规则</h2>
+    				</header>
+	    			<div class="editer cy-m24">
+	    				<script type="text/plain" id="editor" style="width: 100%;height:240px;"></script>
+	    			</div>
+    			</div>
+				<div class="cy-section-foot cy-rel">
+					<button class="cy-btn cy-btn-green cy-btn-sm config-info-save" data-type="submit">保存</button>
+				</div>
+    		</section>
+
+    	</div>
+
+    </div>
+    <!--//End 内容 -->
+    
+    <div class="am-modal am-modal-confirm" data-config="add-modal" data-cy-validators>
+		<div class="am-modal-dialog">
+			<div class="am-modal-hd">新增设置</div>
+			<div class="am-modal-bd" data-content="add-content"></div>
+			<div class="am-modal-footer">
+				<span class="am-modal-btn" data-am-modal-cancel>取消</span> <span
+					class="am-modal-btn" data-am-modal-confirm data-type="submit">确定</span>
+			</div>
+		</div>
+	</div>
+
+<script type="text/template" id="add-content">
+	<form data-cy-validate>
+		<div class="cy-form-group cy-row">
+			<div class="cy-col6">
+				<input class="cy-input" type="hidden" name="rule" value="${rule}">	
+				<select data-am-selected placeholder="类型" name="typePk" data-error="请选择类型" required>
+					<option value="" selected></option>
+					<option value="0">购车</option>
+					<option value="1">保养维修</option>
+					<option value="2">保险</option>
+					<option value="3">其他</option>
+				</select>
+			</div>
+			<div class="cy-col6">
+				<select class="attendPkM-name" data-am-selected placeholder="推荐对象" name="attendPkM" data-error="请选择推荐对象" required>
+					<option value="" selected></option>
+				</select>
+			</div>
+		</div>
+		<div class="cy-form-group cy-row">
+			<div class="cy-col6">
+				<input class="cy-input startTime" type="text" data-type="date" placeholder="开始时间" name="startTime" value="${startTime}" data-error="请选择开始时间" required>
+			</div>
+			<div class="cy-col6">
+				<input class="cy-input endTime" type="text" data-type="date" placeholder="结束时间" name="endTime" value="${endTime}" data-error="请选择结束时间" required>
+			</div>
+		</div>
+		<div class="cy-form-group cy-row">
+			<div class="cy-col6">
+				<select class="giftPkM-name" data-am-selected placeholder="推荐人奖品" name="giftPkM" data-error="请选择推荐人奖品" required>
+					<option value="" selected></option>
+				</select>
+			</div>
+			<div class="cy-col6">
+				<select class="giftPkS-name" data-am-selected placeholder="被推荐人奖品" name="giftPkS" data-error="请选择被推荐人奖品" required>
+					<option value="" selected></option>
+				</select>
+			</div>
+		</div>
+	</form>
+</script>
+    
+
+<script type="text/template" id="config-info-list">
+	<div class="cy-tr" ${isDel}>
+	    <div class="cy-td">${typePk}</div>
+	    <div class="cy-td">${attendPkMName}</div>
+	    <div class="cy-td">${startTime}</div>
+	    <div class="cy-td">${endTime}</div>
+	    <div class="cy-td">${giftPkMName}</div>
+	    <div class="cy-td">${giftPkSName}</div>
+	    <div class="cy-td">
+	    	<button class="cy-btn cy-btn-green cy-btn-sm config-info-edit" data-id="${pk}">编辑</button>
+	    	<button class="cy-btn cy-btn-sm config-info-del" data-id="${pk}">删除</button>
+	    </div>
+	</div>
+</script>
+
+<script src="../js/require.js" data-main="../js/activity/activity-set"></script>
+</body>
+</html>

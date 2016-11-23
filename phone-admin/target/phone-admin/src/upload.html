@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+	<form action="">
+		<input type="file" id="file" name="file" /> <a id="submit">开始上传</a>
+	</form>
+	<div id="log"></div>
+	<script src="./js/jquery.js"></script>
+	<!--引入JS-->
+	<script src="./js/upyun/spark-md5.min.js"></script>
+	<script src="./js/upyun/async.min.js"></script>
+	<script src="./js/upyun/upyun.js"></script>
+	<script src="./js/jquery.md5.js"></script>
+
+	</script>
+	<script type="text/javascript">
+	var accessUrl="";
+	document.getElementById('submit').onclick = function() {
+	    var contentLength = document.getElementById('file').files[0].size;
+	    var filePath = $("#file").val();
+	    var extendName = filePath.substring(filePath.lastIndexOf(".") + 1) .toLowerCase();
+	    $.ajax({
+		url : 'http://localhost:8080/upload/getToken',
+		type : 'POST',
+		dataType : 'json',
+		data : {
+		    path : 'img',
+		    extendName : extendName,
+		    fileSize : contentLength,
+		    fileMD5 : 'a2abb2e3f8fa115b408786cdc9b31b7b'//需要写个js计算文件md5
+		},
+		success : function(data) {
+		    var obj = $.parseJSON(data);
+		    accessUrl= obj.accessPrefix+obj.path;
+		    var config = {
+			bucket : obj.bucket,
+			expiration : obj.expiration,
+			signature : obj.signature,
+			path : obj.path
+		    }
+		    var instance = new Sand(config);
+		    instance.upload(config.path);
+		},
+		error : function(data) {
+		    alert(data);
+		}
+	    });
+	}
+	
+	document.addEventListener('uploaded', function(e) {
+	    alert(accessUrl);
+	});
+	
+
+    </script>
+</body>
+</html>
