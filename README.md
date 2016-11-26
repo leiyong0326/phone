@@ -38,7 +38,7 @@
 <ul>
 <li>mybatis自身支持所有表生成,使用%即可,不过这个生成器的诞生是因为我并没有去研究过mybatisGenerate,不过这个生成了删配置文件肯定比你删各种model,mapper要爽的多咯..</li>
 <li>mybatisGenerate生成所有表示例配置:</li>
-<li><table tableName="%" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"></table></li>
+<li><![CDATA [<table tableName="%" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"></table> ]]></li>
 <li>注:代码生成器纯java编写,由于多次重构,或有些无用的代码未删除,但不影响使用,还望不要介意,我这人太TM懒了.</li>
 </ul>
 # GenerateServiceAndAction用于自动生成除Model和 Mapper.xml以外的所有代码,当然,前提是你的model是存在的,而且PK是作为主键的(你也可以自己改)
@@ -61,8 +61,8 @@
 <li>3.安装zookeeper,研究不深,就会玩dubbo+zookeeper 套路.</li>
 </ul>
 
-QQ群:<ul>
-<li>
+QQ群:
+<ul>
 <li>深圳Java程序员 199267671</li>
 <li>深圳Java(自学交流) 99281683</li>
 </ul>
