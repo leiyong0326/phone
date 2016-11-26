@@ -53,12 +53,13 @@
 <li>1.GenerateServiceAndAction配置IS_DUBBO为true,或者自己手动修改service的@Service注解为dubbo的注解</li>
 <li>2.加入dubbo配置文件(service(提供者),consumerService(消费者)两边都需要配置,具体百度,网上很多),这里我就不列了</li>
 <li>3.安装zookeeper,研究不深,就会玩dubbo+zookeeper 套路.</li>
+<li>注意:dubbo的扫描与shiro冲突,所以服务端需要使用配置文件的方式,如果您有更好的解决方案,谢谢留言--<a href="http://blog.csdn.net/leiyong0326/article/details/52036736">详解</a>.</li>
+<li>dubbo的扫描与SpringAOP事务冲突(AOP事务和注解方式都有冲突,调试发现AOP后dubbo获取的SpringProxy代理类,而不是dubbo的代理类),提供端需要使用手动事务或加一层壳,使用壳(提供者暴露接口用)调用service(AOP事务层),如果您有更好的解决方案,谢谢留言--.</li>
 </ul>
 # 特别提醒
 <ul>
 <li>数据验证请在Proxy中完善checkData方法</li>
 <li>条件查询请在Proxy中完善getConditions方法,使用条件查询务必在SysUserMapper.xml中复制一份selectExtend的sql,记得修改表名哦</li>
-<li>3.安装zookeeper,研究不深,就会玩dubbo+zookeeper 套路.</li>
 </ul>
 
 QQ群:
