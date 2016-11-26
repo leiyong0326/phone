@@ -38,7 +38,7 @@
 <ul>
 <li>mybatis自身支持所有表生成,使用%即可,不过这个生成器的诞生是因为我并没有去研究过mybatisGenerate,不过这个生成了删配置文件肯定比你删各种model,mapper要爽的多咯..</li>
 <li>mybatisGenerate生成所有表示例配置:</li>
-<li><![CDATA [<table tableName="%" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"></table> ]]></li>
+<li><xmp><table tableName="%" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"></table></xmp></li>
 <li>注:代码生成器纯java编写,由于多次重构,或有些无用的代码未删除,但不影响使用,还望不要介意,我这人太TM懒了.</li>
 </ul>
 # GenerateServiceAndAction用于自动生成除Model和 Mapper.xml以外的所有代码,当然,前提是你的model是存在的,而且PK是作为主键的(你也可以自己改)
