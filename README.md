@@ -14,10 +14,10 @@
 使用redis作为缓存
 
 # 项目亮点:
-快速开发,
-采用redis作为主键生成策略,无序考虑主键策略,且通用性相当不错...
 严格的权限控制,当然你也可以自己扩展..
-AOP加注解方式记录日志,日志内容清晰,记录方式简单.
+快速开发,
+采用redis作为主键生成策略,无序考虑主键策略,且通用性相当不错.<a href="http://blog.csdn.net/leiyong0326/article/details/52039200">技术详解</a>
+AOP加注解方式记录日志,日志内容清晰,记录方式简单.<a href="http://blog.csdn.net/leiyong0326/article/details/52039086">技术详解</a>
 强大的代码生成器助你迅速开发,配合mybatisGenerate使用,简单增删改查无需再写任何代码,所有常用方法一键生成,so easy..
 单表查询无需再写mybatis的配置文件,一个selectExtend解决大部分查询条件
 # 项目来源
