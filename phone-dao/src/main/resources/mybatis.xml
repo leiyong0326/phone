@@ -23,16 +23,7 @@
 <!-- 	<typeAlias alias="SysRole" type="com.ly.base.core.model.sys.SysRole" /> -->
 <!-- 	<typeAlias alias="SysAccount" type="com.ly.base.core.model.sys.SysAccount" /> -->
 	<!-- Log -->
-<!-- 	<typeAlias alias="LogCombo" type="com.ly.base.core.model.log.LogCombo" /> -->
-<!-- 	<typeAlias alias="LogDrawMoney" type="com.ly.base.core.model.log.LogDrawMoney" /> -->
 <!-- 	<typeAlias alias="LogLogin" type="com.ly.base.core.model.log.LogLogin" /> -->
 <!-- 	<typeAlias alias="LogOperater" type="com.ly.base.core.model.log.LogOperater" /> -->
-<!-- 	<typeAlias alias="LogPhone" type="com.ly.base.core.model.log.LogPhone" /> -->
-	<!-- Goods -->
-<!-- 	<typeAlias alias="GoodsColor" type="com.ly.base.core.model.goods.GoodsColor" /> -->
-<!-- 	<typeAlias alias="GoodsCombo" type="com.ly.base.core.model.goods.GoodsCombo" /> -->
-<!-- 	<typeAlias alias="GoodsComboLevel" type="com.ly.base.core.model.goods.GoodsComboLevel" /> -->
-<!-- 	<typeAlias alias="GoodsPhone" type="com.ly.base.core.model.goods.GoodsPhone" /> -->
-<!-- 	<typeAlias alias="GoodsType" type="com.ly.base.core.model.goods.GoodsType" /> -->
 </typeAliases>
 </configuration>

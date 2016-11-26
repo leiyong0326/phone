@@ -97,21 +97,6 @@ public class HttpUtil {
 	}
 
 	/**
-	 * POST请求，Map形式数据
-	 * 
-	 * @param url
-	 *            请求地址
-	 * @param param
-	 *            MAP请求数据
-	 * @param charset
-	 *            编码方式
-	 */
-	public static String sendPost(String url, Map<String, String> param, String charset) {
-		String stringParam = UrlUtil.parseToUrlParam(param);
-		return sendPost(url, stringParam, charset);
-	}
-
-	/**
 	 * POST请求，字符串形式数据
 	 * 
 	 * @param url

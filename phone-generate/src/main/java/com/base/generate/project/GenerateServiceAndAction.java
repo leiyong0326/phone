@@ -38,13 +38,13 @@ public class GenerateServiceAndAction extends BaseScanBeanGenerate{
 	public static final boolean IS_DUBBO = false;// 打印Dubbo配置,为true后不再生成文件,优先级其次
 	
 	//开罐
-	public static final boolean GENERATE_MAPPER = false;// 打印Dubbo配置,为true后不再生成文件,优先级其次
-	public static final boolean GENERATE_SERVICE = false;// 打印Dubbo配置,为true后不再生成文件,优先级其次
-	public static final boolean GENERATE_SERVICE_IMPL = false;// 打印Dubbo配置,为true后不再生成文件,优先级其次
-	public static final boolean GENERATE_CONSUMER = false;// 打印Dubbo配置,为true后不再生成文件,优先级其次
-	public static final boolean GENERATE_CONSUMER_IMPL = false;// 打印Dubbo配置,为true后不再生成文件,优先级其次
-	public static final boolean GENERATE_PROXY = false;// 打印Dubbo配置,为true后不再生成文件,优先级其次
-	public static final boolean GENERATE_CONTROLLER = true;// 打印Dubbo配置,为true后不再生成文件,优先级其次
+	public static final boolean GENERATE_MAPPER = false;// 生成Mapper文件开关
+	public static final boolean GENERATE_SERVICE = false;// 生成Service文件开关
+	public static final boolean GENERATE_SERVICE_IMPL = false;// 生成ServiceImpl文件开关
+	public static final boolean GENERATE_CONSUMER = false;// 生成ConsumerService文件开关
+	public static final boolean GENERATE_CONSUMER_IMPL = false;// 生成ConsumerServiceImpl文件开关
+	public static final boolean GENERATE_PROXY = false;// 生成Proxy文件开关
+	public static final boolean GENERATE_CONTROLLER = true;// 生成Controller文件开关
 	
 	
 
@@ -61,44 +61,7 @@ public class GenerateServiceAndAction extends BaseScanBeanGenerate{
 			}
 			return true;
 		});
-//		beanScan(file, "", true);
 	}
-
-	/**
-	 * 
-	 * <p>
-	 * bean文件扫描
-	 * </p>
-	 * <p>
-	 * 扫描指定目录下的所有java文件,生成对应的service和action,与bean同目录结构
-	 * </p>
-	 * 
-	 * @param file
-	 *            需要扫描的文件
-	 * @param parentPack
-	 *            上级包名:若无传递"",否则传递目录,如"com.log"
-	 */
-//	public static void beanScan(File file, String parentPack, boolean isFirst) {
-//		if (file.exists()) {
-//			if (file.isDirectory()) {
-//				File[] fs = file.listFiles();
-//				for (int i = 0; i < fs.length; i++) {
-//					File f = fs[i];
-//					String parent = "";
-//					if (!isFirst) {
-//						parent = parentPack + "." + file.getName();
-//					}
-//					beanScan(f, parent, false);
-//				}
-//			} else if (file.isFile() && file.getName().matches(FILTER_NAME)) {
-//				try {
-//					createByBean(file, parentPack);// 创建相关类
-//				} catch (Exception e) {
-//					printError(file.getAbsolutePath(), e);
-//				}
-//			}
-//		}
-//	}
 
 	/**
 	 * 
@@ -145,8 +108,6 @@ public class GenerateServiceAndAction extends BaseScanBeanGenerate{
 				createController(c, parentPack);
 			}
 		}
-		
-//		 createBeanAction(c, parentPack);
 
 	}
 
