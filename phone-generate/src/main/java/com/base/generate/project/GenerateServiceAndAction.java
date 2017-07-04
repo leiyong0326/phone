@@ -37,7 +37,7 @@ public class GenerateServiceAndAction extends BaseScanBeanGenerate{
 	public static final boolean PRINT_DUBBO_CONSUMER_CONFIG = false;// 打印Dubbo配置,为true后不再生成文件,优先级其次
 	public static final boolean IS_DUBBO = false;// 打印Dubbo配置,为true后不再生成文件,优先级其次
 	
-	//开罐
+	//生成类开关
 	public static final boolean GENERATE_MAPPER = true;// 生成Mapper文件开关
 	public static final boolean GENERATE_SERVICE = true;// 生成Service文件开关
 	public static final boolean GENERATE_SERVICE_IMPL = true;// 生成ServiceImpl文件开关
