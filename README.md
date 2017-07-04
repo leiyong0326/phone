@@ -13,12 +13,14 @@
 <li>使用kaptcha并二次开发作为验证码</li>
 <li>使用maven作为jar管理</li>
 <li>使用redis作为缓存</li>
+<li>使用poi导出excel</li>
 </ul>
 # 项目亮点:
 <ul>
 <li>严格的权限控制,当然你也可以自己扩展..</li>
 <li>采用redis作为主键生成策略,无序考虑主键策略,且通用性相当不错.--<a href="http://blog.csdn.net/leiyong0326/article/details/52039200">技术详解</a></li>
 <li>AOP加注解方式记录日志,日志内容清晰,记录方式简单.--<a href="http://blog.csdn.net/leiyong0326/article/details/52039086">技术详解</a></li>
+<li>简单易用的导出配置,助你5分钟实现导出,详见底部</li>
 <li>强大的代码生成器助你快速开发,配合mybatisGenerate使用,简单增删改查无需再写任何代码,所有常用方法一键生成,so easy..</li>
 <li>单表查询无需再写mybatis的配置文件,一个selectExtend解决大部分查询条件</li>
 </ul>
@@ -57,6 +59,19 @@
 <li>dubbo的扫描与shiro冲突,所以服务端需要使用配置文件的方式,如果您有更好的解决方案,谢谢留言--<a href="http://blog.csdn.net/leiyong0326/article/details/52036736">详见</a>.</li>
 <li>dubbo的扫描与SpringAOP事务冲突(AOP事务和注解方式都有冲突,调试发现AOP后dubbo获取的SpringProxy代理类,而不是dubbo的代理类),提供端需要使用手动事务或加一层壳,使用壳(提供者暴露接口用)调用service(AOP事务层),如果您有更好的解决方案,谢谢留言--.</li>
 </ul>
+
+# 如何实现导出功能?
+<ul>
+<li>1.GenerateServiceAndAction配置GENERATE_EXPORT为true,或者自己手动编写,参考SysUserController(以下以SysUser为例讲解实现).</li>
+<li>2.配置phone-admin项目下src/main/resources/properties/excelExport.properties文件,key为SysUser,value为json,导出字段的对应中文.</li>
+<li>3.实现phone-core项目的com.ly.base.core.excel.export.ext.SysUserExcelExport,注释见父类ExcelExportSuper.</li>
+<li>方法说明:</li>
+<li>formatValue:格式化非直接展示值的数据,如性别,DB中存储的为0或1,将其替换为女或男.t为当前对象,key为当前field.<br/>例如:switch (key) {case "sex":return "0".equals(t.getSex()) ? WOMAN :MAN;}</li>
+<li>formatCondition:格式化查询条件,将查询条件展示到excel标题上.<br/>例如:StringBuffer sb = new StringBuffer();if (t.getName()!=null) {sb.append("姓名:"+t.getName()+BANK)}return sb.toString();.</li>
+<li>getReportName:excel的文件名,如需修改请修改父类.<br/>例如:return "用户列表";则导出文件名为:用户列表2017-07-05.</li>
+<li>更多方法配置请重写父类方法,方法说明请查看父类注释.</li>
+</ul>
+
 # 特别提醒
 <ul>
 <li>数据验证请在Proxy中完善checkData方法</li>
