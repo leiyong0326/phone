@@ -38,12 +38,12 @@ public class GenerateServiceAndAction extends BaseScanBeanGenerate{
 	public static final boolean IS_DUBBO = false;// 打印Dubbo配置,为true后不再生成文件,优先级其次
 	
 	//开罐
-	public static final boolean GENERATE_MAPPER = false;// 生成Mapper文件开关
-	public static final boolean GENERATE_SERVICE = false;// 生成Service文件开关
-	public static final boolean GENERATE_SERVICE_IMPL = false;// 生成ServiceImpl文件开关
-	public static final boolean GENERATE_CONSUMER = false;// 生成ConsumerService文件开关
-	public static final boolean GENERATE_CONSUMER_IMPL = false;// 生成ConsumerServiceImpl文件开关
-	public static final boolean GENERATE_PROXY = false;// 生成Proxy文件开关
+	public static final boolean GENERATE_MAPPER = true;// 生成Mapper文件开关
+	public static final boolean GENERATE_SERVICE = true;// 生成Service文件开关
+	public static final boolean GENERATE_SERVICE_IMPL = true;// 生成ServiceImpl文件开关
+	public static final boolean GENERATE_CONSUMER = true;// 生成ConsumerService文件开关
+	public static final boolean GENERATE_CONSUMER_IMPL = true;// 生成ConsumerServiceImpl文件开关
+	public static final boolean GENERATE_PROXY = true;// 生成Proxy文件开关
 	public static final boolean GENERATE_CONTROLLER = true;// 生成Controller文件开关
 	public static final boolean GENERATE_EXPORT = true;// 生成导出文件开关
 	
@@ -971,29 +971,29 @@ public class GenerateServiceAndAction extends BaseScanBeanGenerate{
 	 */
 	public static void createExport(Class c, String parentPack) throws Exception {
 		String cName = c.getSimpleName();
-		String fileName = getFileName(SERVICE_PROJECT, EXPORT_URL, "excel.export",cName, "ExcelExport.java");
+		String fileName = getFileName(SERVICE_PROJECT, EXPORT_URL, "excel.export.ext",cName, "ExcelExport.java");
 		File f = new File(fileName);
 		if (checkFile(f)) {
-			//判断pk类型
 			StringBuffer sb = new StringBuffer();
-			sb.append(packages(StringUtil.appendStringNotNull(".", EXPORT_URL,"excel.export")));
+			sb.append(packages(StringUtil.appendStringNotNull(".", EXPORT_URL,"excel.export.ext")));
 			sb.append(importBase(StringUtil.appendStringNotNull(".", BEAN_URL,parentPack,cName)));// 导入实体类
 			sb.append(importBase(StringUtil.appendStringNotNull(".", EXPORT_URL,"excel.export",BASE_EXPORT_NAME)));// 导入接口
-			sb.append(importDateUtil());// 导入DateUtil
+			sb.append(importList());// 导入List
 			sb.append(code(String.format(ANNOTATION, "导出"), 0, 0));
 			sb.append(code(String.format("public class %sExcelExport extends %s<%s> {", cName, BASE_EXPORT_NAME,cName),0,1));
 			sb.append(code(String.format("public %sExcelExport(List<%s> data, %s conditions) {",cName,cName,cName),1,1));
 			sb.append(code(String.format("super(data, conditions);"),2,1));
 			sb.append(code(String.format("}"),1,1));
 			sb.append(getOverride());
-			sb.append(code(String.format("protected Object formatValue(% t, String key) {",cName),1,1));
+			sb.append(code(String.format("protected Object formatValue(%s t, String key) {",cName),1,1));
 			sb.append(code(String.format("switch (key) {"),2,1));
 			sb.append(code(String.format("case \"field\":"),2,1));
-			sb.append(code(String.format("return \"fieldName\""),3,1));
+			sb.append(code(String.format("return \"fieldName\";"),3,1));
 			sb.append(code(String.format("}"),2,1));
+			sb.append(code(String.format("return null;"),2,1));
 			sb.append(code(String.format("}"),1,1));
 			sb.append(getOverride());
-			sb.append(code(String.format("protected String formatCondition(% t) {",cName),1,1));
+			sb.append(code(String.format("protected String formatCondition(%s t) {",cName),1,1));
 			sb.append(code(String.format("StringBuffer sb = new StringBuffer();"),2,1));
 			sb.append(code(String.format("if (t.getField()!=null) {"),2,1));
 			sb.append(code(String.format("sb.append(\"FieldName:\");"),3,1));
