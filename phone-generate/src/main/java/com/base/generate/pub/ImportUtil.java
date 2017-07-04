@@ -81,6 +81,9 @@ public class ImportUtil extends BaseGenerate{
 	public static String importBeanUtil(){
 		return importBase("com.ly.base.common.util.BeanUtil");
 	}
+	public static String importDateUtil(){
+		return importBase("com.ly.base.common.util.DateUtil");
+	}
 	public static String importJson(){
 		return importBase("com.ly.base.common.model.Json");
 	}
@@ -108,6 +111,9 @@ public class ImportUtil extends BaseGenerate{
 		sb.append(importBase("com.ly.base.common.em.ext.LogEnum"));
 		sb.append(importBase("com.ly.base.common.em.ext.LogOperateEnum"));
 		return sb.toString();
+	}
+	public static String importExport(String className){
+		return importBase("com.ly.base.core.excel.export.ext."+className+"ExcelExport");
 	}
 
 	/**

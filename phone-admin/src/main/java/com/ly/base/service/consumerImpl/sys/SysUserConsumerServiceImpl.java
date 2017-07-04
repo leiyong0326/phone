@@ -360,4 +360,25 @@ public class SysUserConsumerServiceImpl implements SysUserConsumerService {
 		json.setSuccess(true).setObj(result);
 		return json;
 	}
+	/**
+	 * 导出
+	 * 
+	 * @param conditions
+	 * @param orderBy
+	 * @return
+	 */ 
+	@Override
+	@Logger(model = LogEnum.SysUser, type = LogOperateEnum.Export, title = "")
+	public Json findByExport(List<Model> conditions, String orderBy) {
+		Json json = new Json();
+		Page<SysUser> result = service.findAll(conditions,orderBy);
+		if (result == null) {
+			return ErrorConfig.getSystemErrorJson();
+		}
+		result.forEach((su)->{
+			su.setPassword(null);
+		});
+		json.setSuccess(true).setObj(result);
+		return json;
+	}
 }

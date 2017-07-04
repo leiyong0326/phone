@@ -19,6 +19,7 @@ public class BaseScanBeanGenerate extends BaseGenerate{
 	protected static final String CONSUMER_URL = BASE_BEAN_URL+".service.consumer";// action基础目录
 	protected static final String CONSUMER_IMPL_URL = BASE_BEAN_URL+".service.consumerImpl";// action基础目录
 	protected static final String SERVICE_URL = BASE_BEAN_URL+".core.provide";// service基础目录
+	protected static final String EXPORT_URL = BASE_BEAN_URL+".core";// export基础目录
 	protected static final String IMPL_SERVICE_URL = BASE_BEAN_URL+".service.provideImpl";// serviceImpl基础目录
 	protected static final String MAPPER_URL = BASE_BEAN_URL+".dao";// service基础目录
 	// 用于被继承对象的包名
@@ -34,6 +35,7 @@ public class BaseScanBeanGenerate extends BaseGenerate{
 	protected static final String BASE_MAPPER_NAME = "BaseMapper";
 	protected static final String IMPL_SERVICE_NAME = "BaseServiceImpl";
 	protected static final String BASE_CONSUMER_NAME = "BaseConsumerService";
+	protected static final String BASE_EXPORT_NAME = "ExcelExportSuper";
 	// 公共部分
 	protected static final String BEAN_BASE_PATH = getParentDir("src","main","java");
 	

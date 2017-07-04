@@ -14,7 +14,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.ly.base.common.model.Json;
+import com.ly.base.core.excel.export.ext.SysUserExcelExport;
 import com.ly.base.core.model.sys.SysUser;
+import com.ly.base.core.util.excel.ExportUtil;
 import com.ly.base.proxy.sys.SysUserProxy;
 
 /**
@@ -223,5 +225,17 @@ public class SysUserController {
 	@ResponseBody
 	public Json findAll(HttpServletRequest request,SysUser queryInfo, String orderBy) {
 		return proxy.findAll(request,queryInfo,orderBy);
+	}
+	/**
+	 * 导出
+	 * 
+	 * @param queryInfo
+	 * @param orderBy
+	 * @return
+	 */ 
+	@RequestMapping(value = "/export", method = RequestMethod.GET)
+	public void export(HttpServletRequest request, HttpServletResponse response,SysUser queryInfo, String orderBy) {
+		Json ret = proxy.findByExport(request,queryInfo,orderBy);
+		ExportUtil.export(ret, queryInfo, response, SysUserExcelExport.class);
 	}
 }

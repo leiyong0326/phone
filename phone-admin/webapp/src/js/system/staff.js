@@ -10,6 +10,7 @@ define([ '../require.config' ], function(r) {
 	    this.eventType = null; // 当前操作
 	    this.dataApi = {
 		search : 'sysUser/findByPage', // 查询接口
+		export : 'sysUser/export', // 导出接口
 		update : 'sysUser/insert', // 新增接口
 		searchOne : 'sysUser/get', // 查询某条数据
 		del : 'sysUser/deleteByBatch', // 删除接口
@@ -71,6 +72,7 @@ define([ '../require.config' ], function(r) {
 	    // 按钮组合
 	    this.elements = {
 		search : $('[data-sysUser="query"]'),
+		export : $('[data-sysUser="export"]'),
 		add : $('[data-sysUser="add"]')
 	    };
 	    var that = this;
@@ -273,7 +275,24 @@ define([ '../require.config' ], function(r) {
 		    that.temp.render();
 		});
 	    },
-	    
+	    export:function(){
+		var that = this;
+		this.initSearchOption();
+		$.extend(this.searchOptions,utils.getFormData($('#queryFrom')));
+		var url = window.location.origin + this.dataApi.export;
+		for(var p in this.searchOptions){
+		    var value = searchOptions[p];
+		    if(value!=undefined&&value!==""){
+			if(url.indexof("?")==-1){
+			    url += "?";
+			}else{
+			    url += "&";
+			}
+			url += p+"="+value;
+		    }
+		}
+		window.location.href = url;
+	    },
 	    initSearchOption : function(){
 		this.searchOptions = {
 			pageNum : 1,
@@ -496,10 +515,11 @@ define([ '../require.config' ], function(r) {
 		// 事件组合
 		this.elementEvents = {
 		    search : this.search.bind(that),
+		    export : this.export.bind(that),
 		    add : this.add.bind(that)
 		};
 
-		[ 'search','add' ].map(function(i) {
+		[ 'search','export','add' ].map(function(i) {
 		    that.elements[i].on('click', function() {
 			this.eventType = null;
 

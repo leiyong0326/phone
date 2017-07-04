@@ -45,6 +45,7 @@ public class GenerateServiceAndAction extends BaseScanBeanGenerate{
 	public static final boolean GENERATE_CONSUMER_IMPL = false;// 生成ConsumerServiceImpl文件开关
 	public static final boolean GENERATE_PROXY = false;// 生成Proxy文件开关
 	public static final boolean GENERATE_CONTROLLER = true;// 生成Controller文件开关
+	public static final boolean GENERATE_EXPORT = true;// 生成导出文件开关
 	
 	
 
@@ -62,6 +63,7 @@ public class GenerateServiceAndAction extends BaseScanBeanGenerate{
 			return true;
 		});
 	}
+
 
 	/**
 	 * 
@@ -106,6 +108,9 @@ public class GenerateServiceAndAction extends BaseScanBeanGenerate{
 			}
 			if (GENERATE_CONTROLLER) {
 				createController(c, parentPack);
+			}
+			if (GENERATE_EXPORT) {
+				createExport(c, parentPack);
 			}
 		}
 
@@ -322,6 +327,10 @@ public class GenerateServiceAndAction extends BaseScanBeanGenerate{
 				sb.append(code(String.format("public Json findByPage(List<Model> conditions, int pageNum, int pageSize, String order);",cName),1,1));
 				sb.append(getComment("查询所有", true,"conditions","orderBy"));
 				sb.append(code(String.format("public Json findAll(List<Model> conditions, String orderBy);"),1,1));
+				if (GENERATE_EXPORT) {
+					sb.append(getComment("导出", true,"conditions","orderBy"));
+					sb.append(code(String.format("public Json findByExport(List<Model> conditions, String orderBy);"),1,1));
+				}
 			}
 			sb.append(code("}",0,0));
 			writeFile(f, sb);
@@ -557,6 +566,21 @@ public class GenerateServiceAndAction extends BaseScanBeanGenerate{
 				sb.append(code(String.format("json.setSuccess(true).setObj(result);"),2,1));
 				sb.append(code(String.format("return json;"),2,1));
 				sb.append(code(String.format("}"),1,1));
+				if (GENERATE_EXPORT) {
+					//export
+					sb.append(getComment("导出", true,"conditions","orderBy"));
+					sb.append(getOverride());
+					sb.append(getLogger(cName,"Export",""));
+					sb.append(code(String.format("public Json findByExport(List<Model> conditions, String orderBy) {",cName),1,1));
+					sb.append(code(String.format("Json json = new Json();"),2,1));
+					sb.append(code(String.format("Page<%s> result = service.findAll(conditions,orderBy);",cName),2,1));
+					sb.append(code(String.format("if (result == null) {"),2,1));
+					sb.append(code(String.format("return ErrorConfig.getSystemErrorJson();"),3,1));
+					sb.append(code(String.format("}"),2,1));
+					sb.append(code(String.format("json.setSuccess(true).setObj(result);"),2,1));
+					sb.append(code(String.format("return json;"),2,1));
+					sb.append(code(String.format("}"),1,1));
+				}
 			}
 			sb.append(code("}",0,0));
 			writeFile(f, sb);
@@ -720,6 +744,15 @@ public class GenerateServiceAndAction extends BaseScanBeanGenerate{
 				sb.append(code("List<Model> conditions = getConditions(queryInfo,request);",2,1));
 				sb.append(code(String.format("return checkResult(service.findAll(conditions,orderBy));"),2,1));
 				sb.append(code(String.format("}"),1,1));
+				if (GENERATE_EXPORT) {
+					//export
+					sb.append(getComment("导出", true,"conditions","orderBy"));
+					sb.append(code(String.format("public Json findByExport(HttpServletRequest request,%s queryInfo, String orderBy) {",cName),1,1));
+					sb.append(code("//queryInfo->conditions",2,1));
+					sb.append(code("List<Model> conditions = getConditions(queryInfo,request);",2,1));
+					sb.append(code(String.format("return checkResult(service.findByExport(conditions,orderBy));"),2,1));
+					sb.append(code(String.format("}"),1,1));
+				}
 				//checkData
 				sb.append(getComment("数据校验及数据填充,如更新时间,更新人等", true,"data","user"));
 				sb.append(code(String.format("private String checkData(%s data,SysUser user) {",cName),1,1));
@@ -781,6 +814,9 @@ public class GenerateServiceAndAction extends BaseScanBeanGenerate{
 			sb.append(importRequest());
 			sb.append(importRequestMapping());
 			sb.append(importController());
+			if (GENERATE_EXPORT) {
+				sb.append(importExport(cName));
+			}
 			//注释
 			sb.append(code(String.format(ANNOTATION, "业务暴露,请将不需要的方法删除"), 0, 0));
 			sb.append(getController());
@@ -865,6 +901,15 @@ public class GenerateServiceAndAction extends BaseScanBeanGenerate{
 				sb.append(code(String.format("public Json findAll(HttpServletRequest request,%s queryInfo, String orderBy) {",cName),1,1));
 				sb.append(code(String.format("return proxy.findAll(request,queryInfo,orderBy);"),2,1));
 				sb.append(code(String.format("}"),1,1));
+				if (GENERATE_EXPORT) {
+					//export
+					sb.append(getComment("导出", true,"queryInfo","orderBy"));
+					sb.append(getRequestMapping("export"));
+					sb.append(code(String.format("public void export(HttpServletRequest request,HttpServletResponse response,%s queryInfo, String orderBy) {",cName),1,1));
+					sb.append(code(String.format("Json ret = proxy.findByExport(request,queryInfo,orderBy);"),2,1));
+					sb.append(code(String.format("ExportUtil.export(ret, queryInfo, response, %sExcelExport.class);",cName),2,1));
+					sb.append(code(String.format("}"),1,1));
+				}
 			}
 			sb.append(code("}",0,0));
 			writeFile(f, sb);
@@ -911,6 +956,57 @@ public class GenerateServiceAndAction extends BaseScanBeanGenerate{
 			sb.append(RT_1 + BLANK_2 + "this.service = service;");
 			sb.append(RT_1 + BLANK_1 + "}");
 			sb.append(RT_2 + "}");
+			writeFile(f, sb);
+			printLog(fileName);
+		}
+	}
+	/**
+	 * 创建bean的导出
+	 * 
+	 * @param c
+	 *            需要生成的modelBean
+	 * @param parentPack
+	 *            上级包名:若无传递"",否则传递目录,如"com.log"
+	 * @throws Exception
+	 */
+	public static void createExport(Class c, String parentPack) throws Exception {
+		String cName = c.getSimpleName();
+		String fileName = getFileName(SERVICE_PROJECT, EXPORT_URL, "excel.export",cName, "ExcelExport.java");
+		File f = new File(fileName);
+		if (checkFile(f)) {
+			//判断pk类型
+			StringBuffer sb = new StringBuffer();
+			sb.append(packages(StringUtil.appendStringNotNull(".", EXPORT_URL,"excel.export")));
+			sb.append(importBase(StringUtil.appendStringNotNull(".", BEAN_URL,parentPack,cName)));// 导入实体类
+			sb.append(importBase(StringUtil.appendStringNotNull(".", EXPORT_URL,"excel.export",BASE_EXPORT_NAME)));// 导入接口
+			sb.append(importDateUtil());// 导入DateUtil
+			sb.append(code(String.format(ANNOTATION, "导出"), 0, 0));
+			sb.append(code(String.format("public class %sExcelExport extends %s<%s> {", cName, BASE_EXPORT_NAME,cName),0,1));
+			sb.append(code(String.format("public %sExcelExport(List<%s> data, %s conditions) {",cName,cName,cName),1,1));
+			sb.append(code(String.format("super(data, conditions);"),2,1));
+			sb.append(code(String.format("}"),1,1));
+			sb.append(getOverride());
+			sb.append(code(String.format("protected Object formatValue(% t, String key) {",cName),1,1));
+			sb.append(code(String.format("switch (key) {"),2,1));
+			sb.append(code(String.format("case \"field\":"),2,1));
+			sb.append(code(String.format("return \"fieldName\""),3,1));
+			sb.append(code(String.format("}"),2,1));
+			sb.append(code(String.format("}"),1,1));
+			sb.append(getOverride());
+			sb.append(code(String.format("protected String formatCondition(% t) {",cName),1,1));
+			sb.append(code(String.format("StringBuffer sb = new StringBuffer();"),2,1));
+			sb.append(code(String.format("if (t.getField()!=null) {"),2,1));
+			sb.append(code(String.format("sb.append(\"FieldName:\");"),3,1));
+			sb.append(code(String.format("sb.append(t.getField());"),3,1));
+			sb.append(code(String.format("sb.append(BANK);"),3,1));
+			sb.append(code(String.format("}"),2,1));
+			sb.append(code(String.format("return sb.toString();"),2,1));
+			sb.append(code(String.format("}"),1,1));
+			sb.append(getOverride());
+			sb.append(code(String.format("protected String getReportName() {"),1,1));
+			sb.append(code(String.format("return \"ExcelTitle\";"),2,1));
+			sb.append(code(String.format("}"),1,1));
+			sb.append(code("}",0,0));
 			writeFile(f, sb);
 			printLog(fileName);
 		}

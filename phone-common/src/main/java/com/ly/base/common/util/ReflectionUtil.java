@@ -1,5 +1,7 @@
 package com.ly.base.common.util;
 
+import java.beans.IntrospectionException;
+import java.beans.PropertyDescriptor;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -131,5 +133,9 @@ public class ReflectionUtil extends org.springframework.util.ReflectionUtils{
 			field.setAccessible(true);
 		}
 		return getField(field, target);
+	}
+	public static PropertyDescriptor getPropertyDescriptor(String field, Object target) throws NoSuchFieldException, SecurityException, IntrospectionException{
+		Class<?> cls = target.getClass();
+		return new PropertyDescriptor(field, cls);
 	}
 }

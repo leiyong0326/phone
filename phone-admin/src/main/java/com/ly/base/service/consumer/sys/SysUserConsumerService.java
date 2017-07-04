@@ -121,6 +121,14 @@ public interface SysUserConsumerService {
 	 */ 
 	public Json findAll(List<Model> conditions, String orderBy);
 	/**
+	 * 导出
+	 * 
+	 * @param conditions
+	 * @param orderBy
+	 * @return
+	 */ 
+	public Json findByExport(List<Model> conditions, String orderBy);
+	/**
 	 * 登录
 	 * 
 	 * @param userName

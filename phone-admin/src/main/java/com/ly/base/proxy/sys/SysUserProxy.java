@@ -263,6 +263,18 @@ public class SysUserProxy {
 		return checkResult(service.findAll(conditions,orderBy));
 	}
 	/**
+	 * 导出
+	 * 
+	 * @param queryInfo
+	 * @param orderBy
+	 * @return
+	 */ 
+	public Json findByExport(HttpServletRequest request, SysUser queryInfo, String orderBy) {
+		//queryInfo->conditions
+		List<Model> conditions = getConditions(queryInfo,request);
+		return checkResult(service.findByExport(conditions,orderBy));
+	}
+	/**
 	 * 验证登录名
 	 * @param request
 	 * @param userName
