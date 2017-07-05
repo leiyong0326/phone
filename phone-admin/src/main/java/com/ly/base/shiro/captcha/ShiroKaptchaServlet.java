@@ -1,4 +1,4 @@
-package com.ly.base.shiro;
+package com.ly.base.shiro.captcha;
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;

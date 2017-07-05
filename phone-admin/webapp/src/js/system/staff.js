@@ -279,11 +279,11 @@ define([ '../require.config' ], function(r) {
 		var that = this;
 		this.initSearchOption();
 		$.extend(this.searchOptions,utils.getFormData($('#queryFrom')));
-		var url = window.location.origin + this.dataApi.export;
+		var url = window.location.origin +"/"+ this.dataApi.export;
 		for(var p in this.searchOptions){
-		    var value = searchOptions[p];
+		    var value = this.searchOptions[p];
 		    if(value!=undefined&&value!==""){
-			if(url.indexof("?")==-1){
+			if(url.indexOf("?")==-1){
 			    url += "?";
 			}else{
 			    url += "&";

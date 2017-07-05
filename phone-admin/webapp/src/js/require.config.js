@@ -18,12 +18,9 @@ requirejs.config({
         'temp': 'temp',
         'pagination': 'pagination',
         'datetimepicker': 'amazeui.datetimepicker',
-        'json': 'json2',
+        'json2': 'json2', 
         'umeditorConfig': 'umeditor.config',
         'umeditor': 'umeditor',
-        'sparkMd5': 'upyun/spark-md5.min',
-        'async': 'upyun/async.min',
-        'upyun': 'upyun/upyun-mu',
         'updataFile': 'updataFile',
         'config': 'config'
     }

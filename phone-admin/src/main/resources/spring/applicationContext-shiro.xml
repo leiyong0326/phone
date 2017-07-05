@@ -2,21 +2,22 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
-						http://www.springframework.org/schema/beans/spring-beans.xsd ">
+						http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
 	<description>Shiro Configuration</description>
 
-	<!-- 項目自定义的Realm -->
-	<bean id="shiroCustomRealm" class="com.ly.base.shiro.ShiroCustomRealm">
-		<!-- <property name="cacheManager" ref="shiroCacheManager" /> -->
-	</bean>
 	<!-- Shiro's main business-tier object for web-enabled applications -->
 	<bean id="shiroSecurityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
 		<property name="realm" ref="shiroCustomRealm" />
-		<!-- <property name="cacheManager" ref="shiroCacheManager" /> -->
+		<property name="cacheManager" ref="shiroCacheManager" />
 		<!-- sessionManager -->
-		<!-- <property name="sessionManager" ref="shiroSessionManager"></property> -->
-		<!-- <property name="rememberMeManager" ref="rememberMeManager" /> -->
+		<property name="sessionManager" ref="shiroSessionManager"></property>
+		<property name="rememberMeManager" ref="rememberMeManager" />
+	</bean>
+
+	<!-- 項目自定义的Realm -->
+	<bean id="shiroCustomRealm" class="com.ly.base.shiro.ShiroCustomRealm">
+		<property name="cacheManager" ref="shiroCacheManager" />
 	</bean>
 
 	<!-- Shiro Filter -->
@@ -26,14 +27,6 @@
 		<property name="loginUrl" value="/src/login.html" />
 		<property name="successUrl" value="/src/index.html" />
 		<property name="unauthorizedUrl" value="/error/noperms.html" />
-<!-- 		<property name="filters"> -->
-<!-- 			<map> -->
-<!-- 				<entry key="authc"> -->
-<!-- 					<bean -->
-<!-- 						class="org.apache.shiro.web.filter.authc.PassThruAuthenticationFilter" /> -->
-<!-- 				</entry> -->
-<!-- 			</map> -->
-<!-- 		</property> -->
 		<property name="filterChainDefinitions">
 			<value>
 				/src/js/** = anon
@@ -51,9 +44,9 @@
 	</bean>
 
 	<!-- 用户授权信息Cache -->
-	<!-- <bean id="shiroCacheManager" class="com.ly.base.shiro.ShiroCacheManager"> -->
-	<!-- <property name="redisClientSupport" ref="redisClientSupport" /> -->
-	<!-- </bean> -->
+	<bean id="shiroCacheManager" class="com.ly.base.shiro.ShiroCacheManager">
+		<!-- <property name="redisClientSupport" ref="redisClientSupport" /> -->
+	</bean>
 	<!-- 为SecurityUtils设置securityManager -->
 	<bean
 		class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
@@ -77,34 +70,41 @@
 		<property name="securityManager" ref="shiroSecurityManager" />
 	</bean>
 	<!-- rememberMeManager管理器，写cookie，取出cookie生成用户信息 -->
-	<!-- <bean id="rememberMeManager" class="org.apache.shiro.web.mgt.CookieRememberMeManager"> -->
-	<!-- <property name="cookie" ref="rememberMeCookie" /> -->
-	<!-- </bean> -->
+	<bean id="rememberMeManager" class="org.apache.shiro.web.mgt.CookieRememberMeManager">
+		<property name="cookie" ref="rememberMeCookie" />
+	</bean>
 	<!-- 记住我cookie -->
-	<!-- <bean id="rememberMeCookie" class="org.apache.shiro.web.servlet.SimpleCookie"> -->
-	<!-- rememberMe是cookie的名字 -->
-	<!-- <constructor-arg value="rememberMe" /> -->
-	<!-- <property name="httpOnly" value="true"/> -->
-	<!-- 记住我cookie生效时间30天 -->
-	<!-- <property name="maxAge" value="2592000" /> -->
-	<!-- </bean> -->
+	<bean id="rememberMeCookie" class="org.apache.shiro.web.servlet.SimpleCookie">
+		<!-- rememberMe是cookie的名字 -->
+		<constructor-arg value="rememberMe" />
+		<property name="httpOnly" value="true" />
+		<!-- 记住我cookie生效时间30天 -->
+		<property name="maxAge" value="2592000" />
+	</bean>
 	<!-- 会话Cookie模板 -->
-	<!-- <bean id="sessionIdCookie" class="org.apache.shiro.web.servlet.SimpleCookie"> -->
-	<!-- <constructor-arg value="sid"/> -->
-	<!-- <property name="httpOnly" value="true"/> -->
-	<!-- <property name="maxAge" value="-1"/> -->
-	<!-- </bean> -->
+	<bean id="sessionIdCookie" class="org.apache.shiro.web.servlet.SimpleCookie">
+		<constructor-arg value="sid" />
+		<property name="httpOnly" value="true" />
+		<property name="maxAge" value="-1" />
+	</bean>
 	<!-- sessionManager -->
+	<!-- Session定时检查器 -->
+	<bean id="sessionValidationScheduler"
+		class="org.apache.shiro.session.mgt.quartz.QuartzSessionValidationScheduler"></bean>
+	<bean id="shiroSessionDAO" class="com.ly.base.shiro.dao.ShiroSessionDAO"></bean>
+	<bean id="sessionListeners" class="com.ly.base.shiro.listener.ShiroSessionListener"></bean>
 	<!-- session管理器 -->
-	<!-- <bean id="shiroSessionManager" -->
-	<!-- class="org.apache.shiro.web.session.mgt.DefaultWebSessionManager"> -->
-	<!-- <property name="globalSessionTimeout" value="1800000" /> -->
-	<!-- <property name="deleteInvalidSessions" value="true" /> -->
-	<!-- <property name="sessionValidationSchedulerEnabled" value="true" /> -->
-	<!-- <property name="sessionValidationScheduler" ref="sessionValidationScheduler"/> -->
-	<!-- <property name="sessionDAO" ref="sessionDAO" /> -->
-	<!-- <property name="sessionIdCookieEnabled" value="true" /> -->
-	<!-- <property name="sessionIdCookie" ref="sessionIdCookie" /> -->
-	<!-- </bean> -->
+	<bean id="shiroSessionManager"
+		class="org.apache.shiro.web.session.mgt.DefaultWebSessionManager">
+		<property name="sessionListeners" ref="sessionListeners"></property>
+		<property name="globalSessionTimeout" value="3600000" />
+		<property name="deleteInvalidSessions" value="true" />
+		<property name="sessionValidationSchedulerEnabled" value="true" />
+		<property name="sessionValidationInterval" value="3600000" />
+		<property name="sessionValidationScheduler" ref="sessionValidationScheduler" />
+		<property name="sessionDAO" ref="shiroSessionDAO" />
+		<property name="sessionIdCookieEnabled" value="true" />
+		<property name="sessionIdCookie" ref="sessionIdCookie" />
+	</bean>
 
 </beans>

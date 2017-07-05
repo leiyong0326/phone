@@ -5,7 +5,7 @@
  * version: 1.0.0
  */
 
-define(['jquery', 'sparkMd5', 'jquery.cookie'], function ($, SparkMD5) {
+define(['jquery', 'jquery.cookie'], function ($) {
 
     var loginUser = "loginUser",
         baseUrl = "/";

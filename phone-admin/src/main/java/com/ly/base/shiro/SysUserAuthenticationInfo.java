@@ -4,19 +4,21 @@ import org.apache.shiro.authc.SimpleAuthenticationInfo;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.util.ByteSource;
 
+/**
+ * 自定义登录信息
+ * @author LeiYong
+ *
+ */
 public class SysUserAuthenticationInfo extends SimpleAuthenticationInfo {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 6683549233672308378L;
 //	private SysUser sysUser;
-//	private SysOrganization sysOrganization;
 
 	
-//	public SysUserAuthenticationInfo(Object principal, Object credentials, String realmName,
-//			SysOrganization sysOrganization) {
+//	public SysUserAuthenticationInfo(Object principal, Object credentials, String realmName) {
 //		super(principal, credentials, realmName);
-//		this.sysOrganization = sysOrganization;
 //	}
 	public SysUserAuthenticationInfo() {
 		super();

@@ -19,6 +19,6 @@
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <property name="java-output-path" value="/phone-admin/target/classes"/>
-        <property name="context-root" value="phone-admin"/>
+        <property name="context-root" value="/"/>
     </wb-module>
 </project-modules>

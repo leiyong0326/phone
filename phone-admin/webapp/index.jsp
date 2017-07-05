@@ -6,7 +6,7 @@
 <title>登录</title>
 <script language="javascript" type="text/javascript"> 
 	var lct =  window.location;
-	window.location.href = "./src/project/index.html";
+	window.location.href = "./src/index.html";
 </script>
 </head>
 <body>

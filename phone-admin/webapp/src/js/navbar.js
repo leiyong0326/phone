@@ -4,7 +4,7 @@
  * version: 1.0.0
  */
 
-define(['jquery', 'utils','jquery.cookie','json'],
+define(['jquery', 'utils','jquery.cookie','json2'],
 function($, utils) {
     // 左侧菜单栏
     function Navbar() {}
@@ -117,7 +117,7 @@ function($, utils) {
         // 创建Dom
         createDom: function() {
             if(!this.menuData||JSON.stringify(this.menuData)=="{}"){
-        	window.location.href = '/src/project/index.html';
+        	window.location.href = '/src/index.html';
         	return;
             }
             var wrap = $('body'),

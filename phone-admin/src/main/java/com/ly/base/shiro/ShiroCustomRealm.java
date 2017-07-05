@@ -42,8 +42,6 @@ public class ShiroCustomRealm extends AuthorizingRealm {
 	private static Logger logger = LoggerFactory.getLogger(ShiroCustomRealm.class);
 	private static final String LOGIN_COUNT_NAME = "LOGIN_COUNT";
 
-//	@Autowired
-//	private SysOrganizationConsumerService sysOrganizationConsumerService;
 	@Autowired
 	private SysUserConsumerService sysUserConsumerService;
 	@Autowired

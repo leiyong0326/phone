@@ -1,4 +1,4 @@
-package com.ly.base.shiro;
+package com.ly.base.shiro.captcha;
 
 import org.apache.shiro.authc.UsernamePasswordToken;
 

@@ -1,4 +1,4 @@
-package com.ly.base.shiro;
+package com.ly.base.shiro.captcha;
 import java.awt.Font;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;

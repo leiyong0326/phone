@@ -110,7 +110,7 @@ Login.prototype = {
     forward : function() {
 	var win = window.parent || window;
 	if (!this.menuData || JSON.stringify(this.menuData) == "{}") {
-	    win.location.href = '/src/project/index.html';
+	    win.location.href = '/src/index.html';
 	} else {
 	    win.location.href = '/src/index.html';
 	}
