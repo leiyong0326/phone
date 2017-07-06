@@ -3,7 +3,9 @@ package com.ly.base.proxy.sys;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -51,6 +53,16 @@ import com.ly.base.shiro.exception.SysOrganizationDisabledException;
  */
 @Component
 public class SysUserProxy {
+	private static final Map<String, String> fieldNameMap = new HashMap<>();
+	static {
+		fieldNameMap.put("loginName", "登录名");
+		fieldNameMap.put("accountPk", "会员级别");
+		fieldNameMap.put("name", "姓名");
+		fieldNameMap.put("phone", "手机号");
+		fieldNameMap.put("sex", "性别");
+		fieldNameMap.put("rolePk", "所属角色");
+		fieldNameMap.put("alipay", "支付宝");
+	}
 	/**
 	 * Logger for this class
 	 */
@@ -527,7 +539,7 @@ public class SysUserProxy {
 	 * @return
 	 */ 
 	private String checkData(SysUser data,SysUser user) {
-		String result = BeanUtil.checkEntity(data, "loginName","accountPk","name","phone","sex","rolePk","alipay");
+		String result = BeanUtil.checkEntity(data, fieldNameMap);
 		if (result!=null) {
 			return result;
 		}

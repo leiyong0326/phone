@@ -1,6 +1,7 @@
 package com.ly.base.proxy.sys;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -37,6 +38,10 @@ import com.ly.base.service.consumer.sys.SysRoleConsumerService;
 @Component
 public class SysRoleProxy {
 
+	private static final Map<String, String> fieldNameMap = new HashMap<>();
+	static {
+		fieldNameMap.put("name", "角色名");
+	}
 	@Autowired
 	private SysRoleConsumerService service;
 	/**
@@ -240,7 +245,7 @@ public class SysRoleProxy {
 	 * @return
 	 */ 
 	private String checkData(SysRole data,SysUser user) {
-		return BeanUtil.checkEntity(data, "name");
+		return BeanUtil.checkEntity(data, fieldNameMap);
 	}
 	/**
 	 * 验证返回结果

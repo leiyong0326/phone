@@ -18,6 +18,7 @@ import com.ly.base.common.model.Model;
 import com.ly.base.common.system.ErrorConfig;
 import com.ly.base.common.system.cookies.AdminCookieConfig;
 import com.ly.base.common.util.ArrayUtil;
+import com.ly.base.common.util.BeanUtil;
 import com.ly.base.common.util.MyBatisUtil;
 import com.ly.base.common.util.ReflectionUtil;
 import com.ly.base.core.model.sys.SysMenu;
@@ -33,6 +34,12 @@ import com.ly.base.util.AdminSecurityUtil;
  */
 @Component
 public class SysMenuProxy {
+	private static final Map<String, String> fieldNameMap = new HashMap<>();
+	static {
+		fieldNameMap.put("url", "url");
+		fieldNameMap.put("seq", "序列");
+		fieldNameMap.put("text", "名称");
+	}
 	/**
 	 * Logger for this class
 	 */
@@ -458,8 +465,7 @@ public class SysMenuProxy {
 	 * @return
 	 */ 
 	private String checkData(SysMenu data,SysUser user) {
-		//TODO 请完善数据校验及填充,如更新时间,更新人等
-		return null;
+		return BeanUtil.checkEntity(data, fieldNameMap);
 	}
 	/**
 	 * 验证返回结果

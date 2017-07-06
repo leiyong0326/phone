@@ -4,6 +4,8 @@ import com.ly.base.core.model.sys.SysAccount;
 import com.ly.base.service.consumer.sys.SysAccountConsumerService;
 import com.ly.base.common.model.Json;
 import java.util.List;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import com.ly.base.common.model.Model;
 import javax.servlet.http.HttpServletRequest;
@@ -11,6 +13,7 @@ import com.ly.base.common.system.ErrorConfig;
 import com.ly.base.core.util.WebUtils;
 import org.springframework.stereotype.Component;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import com.ly.base.common.util.BeanUtil;
 import com.ly.base.common.util.MyBatisUtil;
@@ -23,6 +26,14 @@ import com.ly.base.core.model.sys.SysUser;
  */
 @Component
 public class SysAccountProxy {
+	private static final Map<String, String> fieldNameMap = new HashMap<>();
+	static {
+		fieldNameMap.put("name", "会员名");
+		fieldNameMap.put("ratio", "分润比例");
+		fieldNameMap.put("score", "所需积分");
+		fieldNameMap.put("ratioUp", "上级比例");
+		fieldNameMap.put("valid", "分成模式");
+	}
 
 	@Autowired
 	private SysAccountConsumerService service;
@@ -183,7 +194,7 @@ public class SysAccountProxy {
 	 * @return
 	 */ 
 	private String checkData(SysAccount data,SysUser user) {
-		return BeanUtil.checkEntity(data, "name","ratio","score","ratioUp","valid");
+		return BeanUtil.checkEntity(data, fieldNameMap);
 	}
 	/**
 	 * 验证返回结果

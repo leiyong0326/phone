@@ -26,7 +26,7 @@ public class SysAccount implements Serializable {
 
     private BigDecimal ratioUp;
 
-    private Integer valid;
+    private Integer valid;//'0所有层级,1上级 分成,2上一级分成'
 
     public Integer getPk() {
         return pk;

@@ -4,6 +4,8 @@ import static com.base.generate.pub.ImportUtil.*;
 
 import java.io.File;
 import java.lang.reflect.Field;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.apache.commons.io.FilenameUtils;
 
@@ -630,6 +632,10 @@ public class GenerateServiceAndAction extends BaseScanBeanGenerate{
 			sb.append(code(String.format(ANNOTATION, "参数验证,参数处理,缓存session、cookie"), 0, 0));
 			sb.append(getComponent());
 			sb.append(code(String.format("public class %sProxy {", cName),0,2));
+			sb.append(code(String.format("private static final Map<String, String> fieldNameMap = new HashMap<>();"),1,1));
+			sb.append(code(String.format("static {"),1,1));
+			sb.append(code(String.format("fieldNameMap.put(\"field\", \"对应中文\");"),2,1));
+			sb.append(code(String.format("}"),1,1));
 			sb.append(getAutowired());
 			sb.append(code(String.format("private %s service;", consumerServiceName), 1, 1));
 //			sb.append(code(String.format("public void set%s(%s service) {%s%s%s}",consumerServiceName, consumerServiceName,RT_1+BLANK_2,"this.service=service;",RT_1+BLANK_1),1,1));
@@ -757,7 +763,8 @@ public class GenerateServiceAndAction extends BaseScanBeanGenerate{
 				sb.append(getComment("数据校验及数据填充,如更新时间,更新人等", true,"data","user"));
 				sb.append(code(String.format("private String checkData(%s data,SysUser user) {",cName),1,1));
 				sb.append(code(String.format("//TODO 请完善数据校验及填充,如更新时间,更新人等"),2,1));
-				sb.append(code(String.format("return BeanUtil.checkEntity(data,null,null);"),2,1));
+				sb.append(code(String.format("return BeanUtil.checkEntity(data,fieldNameMap);"),2,1));
+				sb.append(code(String.format("//return BeanUtil.checkEntity(data,\"field1\",\"field2\");"),2,1));
 				sb.append(code(String.format("}"),1,1));
 				//checkResult
 				sb.append(getComment("验证返回结果", true,"json"));

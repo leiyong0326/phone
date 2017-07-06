@@ -1,15 +1,12 @@
 package com.ly.base.common.util;
 
 import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import java.util.Date;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.apache.commons.beanutils.BeanUtilsBean;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.expression.ExpressionParser;
@@ -23,41 +20,6 @@ import org.springframework.expression.spel.support.StandardEvaluationContext;
  * @Description
  */
 public class BeanUtil {
-	//BeanUtilsBean
-	@SuppressWarnings("rawtypes")
-	public static void populate(Object bean, Map properties) throws IllegalAccessException, InvocationTargetException {
-
-		// Do nothing unless both arguments have been specified
-		if ((bean == null) || (properties == null)) {
-			return;
-		}
-		// Loop through the property name/value pairs to be set
-		Iterator entries = properties.entrySet().iterator();
-		while (entries.hasNext()) {
-
-			// Identify the property name and value(s) to be assigned
-			Map.Entry entry = (Map.Entry) entries.next();
-			if (entry.getValue() instanceof Long) {
-				String name = (String) entry.getKey();
-				if (name == null) {
-					continue;
-				}
-				Date valueDate = new Date((Long) entry.getValue());
-				// Perform the assignment for this property
-				BeanUtilsBean.getInstance().setProperty(bean, name, (Object) valueDate);
-			} else {
-				String name = (String) entry.getKey();
-				if (name == null) {
-					continue;
-				}
-				// Perform the assignment for this property
-				if (entry.getValue() != null) {
-					BeanUtilsBean.getInstance().setProperty(bean, name, entry.getValue());
-				}
-			}
-
-		}
-	}
 	/**
 	 * 验证对象属性是否为空,不支持子属性
 	 * @param obj
@@ -78,6 +40,36 @@ public class BeanUtil {
 						boolean res = checkFieldNotNull(value);
 						if (!res) {
 							return f+"不能为空";
+						}
+					}
+				}
+			}
+		}
+		return null;
+	}
+	/**
+	 * 验证对象属性是否为空,不支持子属性
+	 * @param obj
+	 * @param notNullFieldErrorMap key:属性名,value:属性中文名
+	 * @return
+	 */
+	public static String checkEntity(final Object obj,Map<String, String> notNullFieldErrorMap){
+		if (obj==null) {
+			return "信息异常";
+		}else {
+			if (notNullFieldErrorMap != null) {
+				Set<String> keys = notNullFieldErrorMap.keySet();
+				Class<?> clazz = obj.getClass();
+				for (String key : keys) {
+					if (StringUtils.isNotBlank(key)) {
+						Field field = ReflectionUtil.findField(clazz, key);
+						if (field == null) {
+							return "信息异常";
+						}
+						Object value = ReflectionUtil.getFieldAndSetAccessible(field, obj);
+						boolean res = checkFieldNotNull(value);
+						if (!res) {
+							return notNullFieldErrorMap.get(key) + "不能为空";
 						}
 					}
 				}
