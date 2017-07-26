@@ -29,7 +29,7 @@ import com.ly.base.common.util.StringUtil;
 @SuppressWarnings("rawtypes")
 public class GenerateServiceAndAction extends BaseScanBeanGenerate{
 	
-	private static final String FILTER_NAME = "\\w+\\.java";// 扫描的文件名,正则方式
+	private static final String FILTER_NAME = "User\\w+\\.java";// 扫描的文件名,正则方式
 
 	public static final boolean PRINT_INFO_FLAG = true;// 打印信息开关
 	public static final boolean PRINT_ERROR_FLAG = true;// 打印错误开关
@@ -616,6 +616,9 @@ public class GenerateServiceAndAction extends BaseScanBeanGenerate{
 			sb.append(importBase(StringUtil.appendStringNotNull(".",CONSUMER_URL,parentPack,consumerServiceName)));// 导入实体类
 			sb.append(importJson());// 导入接口
 			sb.append(importList());
+			sb.append(importArrayList());
+			sb.append(importMap());
+			sb.append(importHashMap());
 			sb.append(importAutowired());
 			sb.append(importModel());
 			sb.append(importBeanUtil());
@@ -623,7 +626,6 @@ public class GenerateServiceAndAction extends BaseScanBeanGenerate{
 			sb.append(importErrorConfig());
 			sb.append(importWebUtils());
 			sb.append(importComponent());
-			sb.append(importArrayList());
 			sb.append(importMyBatisUtil());
 			if (!cName.equals("SysUser")) {
 				sb.append(importSysUser());
@@ -823,6 +825,8 @@ public class GenerateServiceAndAction extends BaseScanBeanGenerate{
 			sb.append(importController());
 			if (GENERATE_EXPORT) {
 				sb.append(importExport(cName));
+				sb.append(importResponse());
+				sb.append(importExportUtil());
 			}
 			//注释
 			sb.append(code(String.format(ANNOTATION, "业务暴露,请将不需要的方法删除"), 0, 0));

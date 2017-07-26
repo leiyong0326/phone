@@ -75,6 +75,12 @@ public class ImportUtil extends BaseGenerate{
 	public static String importArrayList(){
 		return importBase("java.util.ArrayList");
 	}
+	public static String importMap(){
+		return importBase("java.util.Map");
+	}
+	public static String importHashMap(){
+		return importBase("java.util.HashMap");
+	}
 	public static String importMyBatisUtil(){
 		return importBase("com.ly.base.common.util.MyBatisUtil");
 	}
@@ -105,6 +111,9 @@ public class ImportUtil extends BaseGenerate{
 	public static String importRequest(){
 		return importBase("javax.servlet.http.HttpServletRequest");
 	}
+	public static String importResponse(){
+		return importBase("javax.servlet.http.HttpServletResponse");
+	}
 	public static String importLogger(){
 		StringBuffer sb = new StringBuffer();
 		sb.append(importBase("com.ly.base.common.annotation.Logger"));
@@ -114,6 +123,9 @@ public class ImportUtil extends BaseGenerate{
 	}
 	public static String importExport(String className){
 		return importBase("com.ly.base.core.excel.export.ext."+className+"ExcelExport");
+	}
+	public static String importExportUtil(){
+		return importBase("com.ly.base.core.util.excel.ExportUtil");
 	}
 
 	/**
