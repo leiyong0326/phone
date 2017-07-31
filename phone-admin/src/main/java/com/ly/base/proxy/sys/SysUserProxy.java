@@ -350,11 +350,6 @@ public class SysUserProxy {
 	 */
 	public Json loginSystem(HttpServletRequest request, HttpServletResponse response,String loginName,String password,String rememberme) {
 		Json loginResult = new Json();
-//		String second = UrlUtil.getSecondUrl(request.getServerName());
-//		if (second.equals("")) {
-//			loginResult.setMsg(ErrorConfig.SYSTEM_ERROR);
-//			return loginResult;
-//		}
 		if (!StringUtil.checkNotEmpty(loginName,password,rememberme)) {
 			return ErrorConfig.getSystemParamErrorJson();
 		}
